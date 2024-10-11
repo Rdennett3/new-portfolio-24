@@ -40,14 +40,16 @@ const LowerAbout = () => {
         tl2.from("#pier", {
             y: 100,
             autoAlpha: 0,
-            stagger: .25
+            stagger: .25,
+            scale: .9
         }).to({}, {
             y: 0,
             autoAlpha: 1,
-            stagger: .25
+            stagger: .25,
+            scale: 1
         })
         ScrollTrigger.create({
-            trigger: ".lower-about-wrapper",
+            trigger: ".lower-about-container",
             start: "top 70%",
             end: "top 10%",
             animation: tl2,
@@ -57,10 +59,10 @@ const LowerAbout = () => {
     }, [])
     return (
         <>
-            <section className="lower-about-container">
+            <section className="lower-about-container" id="pier">
                 <div className="lower-about-wrapper">
                     <div className="lower-about-item">
-                        <img src={Pier} alt="" id="pier" />
+                        <img src={Pier} alt="" />
                     </div>
                     <div className="lower-about-item">
                         <p className="laptop">Outside of work I enjoy Cooking, Hiking, Camping, Snowboarding, Martial Arts, trying new restaurants, reading, and attempting to get a green thumb - I am getting better, I swear.</p>

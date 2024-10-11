@@ -6,11 +6,10 @@ const Footer = () => {
     return (
         <>
             <section className="footer-container">
-                {/* <div className="footer-wrapper">
-                    <div className="footer-item"></div>
-                    <div className="footer-item"></div>
-                    <div className="footer-item"></div>
-                </div> */}
+                <div className="footer-section"></div>
+                <div className="footer-section">
+                    <h1 className="footer-large">BobDennett</h1>
+                </div>
             </section>
         </>
     )

@@ -37,7 +37,10 @@ const BrokenWork = () => {
     }, [])
     return (
         <>
-            <section className="broken-work">
+            <section className="work-new-container">
+
+            </section>
+            {/* <section className="broken-work">
                 <div className="broken-work-container">
                     <div className="featured">
                         <div className="featured-container broken-work-item">
@@ -109,7 +112,7 @@ const BrokenWork = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }
