@@ -9,7 +9,7 @@ const ContactHeader = () => {
             <section className="contact-header-container">
                 <div className="contact-header-wrapper">
                     <div className="contact-header-item">
-                        <h1 className="name">Get In Touch</h1>
+                        <h1 className="name-2">Get In Touch</h1>
                     </div>
                     <div className="contact-header-item"></div>
                 </div>

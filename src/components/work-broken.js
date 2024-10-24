@@ -2,43 +2,64 @@ import * as React from "react"
 import { useEffect, useRef } from "react"
 import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import PpawsSquare from '../images/work/ppaws-square.webp'
-import NamKnights from '../images/work/nam-knights-square.webp'
-import Naba from '../images/work/naba-square.webp'
-import Nycuf from '../images/work/nycuf-square.webp'
-import Nepa from '../images/work/nepa-square.webp'
+
 const BrokenWork = () => {
     const app = useRef < HTMLDivElement > (null);
     useEffect(() => {
-        const work = gsap.utils.toArray('.broken-work-item');
-        work.forEach(work => {
-            const workanim = gsap.fromTo(
-                work,
-                {
-                    x: 50,
-                    duration: 1,
-                    pin: 1,
-                    scale: .9
-                },
-                {
-                    x: 0,
-                    duration: 1,
-                    pin: 1,
-                    scale: 1,
-                    stagger: 2
+        let recentmm = gsap.matchMedia();
+
+        recentmm.add("(min-width:900px)", () => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".work-new-wrapper",
+                    start: "top 50%",
+                    end: "top top",
                 }
-            );
-            ScrollTrigger.create({
-                trigger: work,
-                animation: workanim,
+            });
+
+            tl.from(".anim-2", {
+                y: 50,
+                stagger: .05,
+                autoAlpha: 0
             })
+                .to(".anim-2", {
+                    stagger: .05,
+                    autoAlpha: 1
+                })
         })
 
     }, [])
     return (
         <>
             <section className="work-new-container">
-
+                <div className="work-new-wrapper">
+                    <div className="work-new-item work-title">
+                        <h1 className="name-2"><span className="anim-2">R</span><span className="anim-2">e</span><span className="anim-2">c</span><span className="anim-2">e</span><span className="anim-2">n</span><span className="anim-2">t</span>&nbsp;<span className="anim-2">W</span><span className="anim-2">o</span><span className="anim-2">r</span><span className="anim-2">k</span></h1>
+                    </div>
+                    <div className="work-new-item">
+                        <div className="work-card">
+                            <h1>Excelsior Wood Shop</h1>
+                        </div>
+                        <div className="work-card">
+                            <h1>Personal Paws</h1>
+                        </div>
+                        <div className="work-card">
+                            <h1>Nam Knights M.C.</h1>
+                        </div>
+                        <div className="work-card">
+                            <h1>NABA</h1>
+                        </div>
+                        <div className="work-card">
+                            <h1>NEPA FCU</h1>
+                        </div>
+                        <div className="work-card">
+                            <h1>NYCUF</h1>
+                        </div>
+                        <div className="work-card">
+                            <h1>NYCUA</h1>
+                        </div>
+                    </div>
+                </div>
             </section>
             {/* <section className="broken-work">
                 <div className="broken-work-container">

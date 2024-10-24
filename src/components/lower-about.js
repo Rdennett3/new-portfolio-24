@@ -6,55 +6,7 @@ import Pier from "../images/pier2.webp"
 const LowerAbout = () => {
     const app = useRef < HTMLDivElement > (null);
     useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
 
-        const tl = gsap.timeline({
-            ease: "none"
-        });
-
-        tl.from(".laptop", {
-            y: 100,
-            duration: 1,
-            autoAlpha: 0
-        }).to({}, {
-            duration: 1,
-            autoAlpha: 1,
-            y: 0
-        })
-        ScrollTrigger.create({
-            trigger: ".lower-about-wrapper",
-            start: "top 50%",
-            end: "top 20%",
-            // pin: true,
-            animation: tl,
-            // markers: true,
-            // scrub: 1,
-            // pinSpacing: false
-        })
-
-        // NEON SLIDE UP ANIMATION
-        const tl2 = gsap.timeline({
-            ease: "none"
-        });
-
-        tl2.from("#pier", {
-            y: 100,
-            autoAlpha: 0,
-            stagger: .25,
-            scale: .9
-        }).to({}, {
-            y: 0,
-            autoAlpha: 1,
-            stagger: .25,
-            scale: 1
-        })
-        ScrollTrigger.create({
-            trigger: ".lower-about-container",
-            start: "top 70%",
-            end: "top 10%",
-            animation: tl2,
-            scrub: 1,
-        })
 
     }, [])
     return (

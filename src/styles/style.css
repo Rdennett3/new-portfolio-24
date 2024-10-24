@@ -1,4 +1,5 @@
 @import url("https://use.typekit.net/cqb5tzz.css");
+@import url("https://use.typekit.net/cqb5tzz.css");
 
 * {
     margin: 0;
@@ -19,7 +20,9 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'norman-variable';
+    font-family: "norman-variable", sans-serif;
+    font-variation-settings: "opsz" 1;
+    font-weight: 700;
 }
 
 :root {
@@ -30,11 +33,30 @@ h4 {
     --charcoal: #2A3D45;
     --orange: #F85E00;
     --purple: #1F0318;
+    --bitter: #F87666;
     --sea: #3B5249;
+    --cambridge: #95A78D;
+    --silver: #AAA69D;
     --max-width: 1600px;
     --inner-width: 95%;
     --mobile-inner-width: 85%;
     --gradient: linear-gradient(to bottom, var(--white), var(--lime));
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--silver);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--charcoal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 h1 {
@@ -191,7 +213,7 @@ h1 {
     width: 95%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1em;
     background: var(--white);
 }
@@ -201,10 +223,13 @@ h1 {
     height: auto;
     padding: 20px 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
+    /* background: yellow; */
 }
 
-.header-item h2 {
+/* .header-item h2 {
     font-weight: 200;
 }
 
@@ -229,11 +254,31 @@ h1 {
 .header-item:nth-of-type(3) {
     align-items: flex-end;
     justify-content: flex-end;
-}
+} */
 
 .header-item a {
     text-decoration: none;
     color: var(--charcoal);
+}
+
+.weather-wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 2.5%; */
+    /* margin-right: 2.5%; */
+}
+
+.weather-wrapper img {
+    width: 40px;
+    height: auto;
+}
+
+#temp {
+    margin-right: 10px;
 }
 
 .new-home-header {
@@ -244,6 +289,7 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 5% 0 0 0;
+    background: var(--white);
 }
 
 .new-header-item {
@@ -726,6 +772,7 @@ h1 {
     margin-top: 25px;
     text-align: center;
     transition: all .5s ease-in-out;
+    margin-top: 50px;
 }
 
 .featured-btn:hover {
@@ -754,6 +801,145 @@ h1 {
     border: 1px solid var(--white);
     /* border-radius: 25px; */
 }
+
+.work-new-container {
+    width: 100%;
+    height: auto;
+    padding: 5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-new-wrapper {
+    width: var(--inner-width);
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-new-item {
+    width: 100%;
+    display: flex;
+    min-height: 200px;
+}
+
+.work-title {}
+
+span {
+    margin: 0;
+    padding: 0;
+}
+
+.name-2 {
+    font-size: 10vw;
+    line-height: 1em;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center;
+    justify-content: center; */
+    width: 100%;
+    text-align: center;
+    color: var(--charcoal);
+    font-weight: 400;
+}
+
+.work-new-item:nth-of-type(1) {
+    width: 100%;
+    height: auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.work-new-item:nth-of-type(2) {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: minmax(350px, auto);
+    gap: 1em;
+}
+
+/* @media screen and (max-width:750px){
+    .work-new-item:nth-of-type(2){
+        grid-template-columns: 1fr;
+    }
+} */
+
+.work-card {
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    background: var(--cambridge);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-card h1 {
+    color: var(--neon);
+}
+
+.work-card:nth-of-type(1) {
+    grid-column: 1 / 6;
+    grid-row: 1;
+    /* background-image: url('../images/work/bw/excelsior.png');
+    background-size: cover;
+    background-position: center; */
+}
+
+.work-card:nth-of-type(2) {
+    grid-column: 6 / 9;
+    grid-row: 1;
+    /* background-image: url('../images/work/bw/ppaws-new.png');
+    background-size: cover;
+    background-position: top; */
+}
+
+.work-card:nth-of-type(3) {
+    grid-column: 1 / 5;
+    grid-row: 2;
+    /* background-image: url('../images/work/nam-knights-square.webp');
+    background-size: cover;
+    background-position: center; */
+}
+
+.work-card:nth-of-type(4) {
+    grid-column: 5 / 9;
+    grid-row: 2;
+    /* background-image: url('../images/work/bw/naba-square.png');
+    background-size: cover;
+    background-position: center; */
+}
+
+.work-card:nth-of-type(5) {
+    grid-column: 1/4;
+    grid-row: 3;
+    /* background-image: url('../images/work/bw/nepa-square.png');
+    background-size: cover;
+    background-position: center; */
+}
+
+.work-card:nth-of-type(6) {
+    grid-column: 4 / 6;
+    grid-row: 3;
+    /* background-image: url('../images/work/bw/nycuf-square.png');
+    background-size: cover;
+    background-position: top; */
+}
+
+.work-card:nth-of-type(7) {
+    grid-column: 6 / 9;
+    grid-row: 3;
+    /* background-image: url('../images/work/bw/nycua-new.png');
+    background-size: cover;
+    background-position: center; */
+}
+
+
 
 /* CONTACT PAGE STYLES */
 
@@ -859,7 +1045,7 @@ h1 {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     /* background: var(--beige); */
-    background: var(--purple);
+    background: var(--charcoal);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -903,4 +1089,52 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: 25px;
+}
+
+/* 404 PAGE STYLES */
+
+.error-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.error-wrapper {
+    width: var(--inner-width);
+    max-width: var(--max-width);
+    padding: 5% 0;
+}
+
+/* src/components/horizontalScroll.css */
+.horizontal-scroll-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.horizontal-scroll-content {
+    display: flex;
+    width: 300vw;
+    /* Adjust based on the number of sections */
+    height: 100vh;
+}
+
+.horizontal-section {
+    flex: 0 0 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.horizontal-section-inner {
+    width: var(--inner-width);
+    max-width: var(--max-width);
+    height: 85%;
+    background: black;
+    border-radius: 50px;
 }

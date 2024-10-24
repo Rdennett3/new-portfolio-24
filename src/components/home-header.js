@@ -13,9 +13,9 @@ const HomeHeader = () => {
 
         gsap.registerPlugin(ScrollTrigger)
 
-        gsap.from('.anim1', { y: 50, autoAlpha: 0, stagger: .1, delay: .25, duration: .75 });
+        gsap.from('.anim1', { y: 50, autoAlpha: 0, stagger: .09, delay: .15, duration: .5 });
         gsap.from(".desc", { y: 50, duration: 2, autoAlpha: 0, delay: .5 });
-        gsap.from("#water", { x: 50, duration: 2, pin: 1, scale: .9, delay: .75, autoAlpha: 0 });
+        gsap.from("#water", { y: 50, duration: 2, delay: .75, autoAlpha: 0 });
 
     }, [])
 
@@ -36,7 +36,7 @@ const HomeHeader = () => {
                             {/* <h1 className="name anim1">Web Developer</h1> */}
                         </div>
                         <div className="top-info-item">
-                            <p className="desc">I am a Full-stack developer with a passion for the front end and all things design and e-comm related. Currently calling the Capital District of New York home, but I probably should be living near a warm beach.</p>
+                            <p className="desc">I am a Full-stack developer with a passion for the front end and all things design and e-comm related. Currently calling the Capital District of New York home, but I should probably be living near a warm beach.</p>
                         </div>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ import BrokenWork from "../components/work-broken"
 import LowerAbout from "../components/lower-about"
 import Footer from "../components/footer"
 import SlideOverLayout from "../components/slide-over"
+import HorizontalScroll from "../components/horizontal-about"
 
 const IndexPage = () => {
   return (
@@ -16,6 +17,7 @@ const IndexPage = () => {
         <HomeHeader />
         <BrokenWork />
       </div>
+      {/* <HorizontalScroll /> */}
       <LowerAbout />
       {/* <Footer /> */}
       {/* <SlideOverLayout /> */}
