@@ -1,0 +1,23 @@
+.horizontal-scroll-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.horizontal-scroll-content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.scroll-item {
+    min-width: 100vw;
+    /* Full viewport width */
+    height: 100vh;
+    /* Full viewport height */
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}

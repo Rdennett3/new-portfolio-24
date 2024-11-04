@@ -5,22 +5,17 @@ import Header from "../components/header"
 import BrokenWork from "../components/work-broken"
 import LowerAbout from "../components/lower-about"
 import Footer from "../components/footer"
-import SlideOverLayout from "../components/slide-over"
-import HorizontalScroll from "../components/horizontal-about"
+import AboutExtra from "../components/about-extra"
 
 const IndexPage = () => {
   return (
     <>
-      {/* will pin this section so the about area slides over it */}
-      <div className="pinned-section">
-        <Header />
-        <HomeHeader />
-        <BrokenWork />
-      </div>
-      {/* <HorizontalScroll /> */}
+      <Header />
+      <HomeHeader />
+      <AboutExtra />
+      <BrokenWork />
       <LowerAbout />
-      {/* <Footer /> */}
-      {/* <SlideOverLayout /> */}
+      <Footer />
 
     </>
   )

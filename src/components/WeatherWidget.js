@@ -7,19 +7,24 @@ const WeatherWidget = () => {
 
     useEffect(() => {
         // Get user location
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const { latitude, longitude } = position.coords;
-                    setLocation({ latitude, longitude });
-                },
-                (error) => {
-                    setError("Location access denied");
-                }
-            );
-        } else {
-            setError("Geolocation is not supported by this browser.");
-        }
+        const delayGeolocation = setTimeout(() => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const { latitude, longitude } = position.coords;
+                        setLocation({ latitude, longitude });
+                    },
+                    (error) => {
+                        setError("Location access denied");
+                    }
+                );
+            } else {
+                setError("Geolocation is not supported by this browser.");
+            }
+        }, 3000); // Delay by 3 seconds
+
+        // Cleanup the timeout if the component is unmounted before it triggers
+        return () => clearTimeout(delayGeolocation);
     }, []);
 
     useEffect(() => {
@@ -62,7 +67,7 @@ const WeatherWidget = () => {
                     )}
                 </div>
             ) : (
-                !error && <h3>Loading weather data...</h3>
+                !error && <h2>Loading...</h2>
             )}
         </div>
     );
