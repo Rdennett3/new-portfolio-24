@@ -13,6 +13,9 @@ const Footer = () => {
                         <a href="https://www.instagram.com/bobd3/" target="_blank" rel="noreferrer"><h1>Instagram</h1></a>
                         <a href="https://www.instagram.com/bobd3/" target="_blank" rel="noreferrer"><h1>Github</h1></a>
                     </div>
+                    <div className="footer-item">
+                        <p>&copy; 2024 Bob Dennett</p>
+                    </div>
                 </div>
             </section>
         </>

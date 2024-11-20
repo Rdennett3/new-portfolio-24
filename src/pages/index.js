@@ -6,7 +6,7 @@ import BrokenWork from "../components/work-broken"
 import LowerAbout from "../components/lower-about"
 import Footer from "../components/footer"
 import AboutExtra from "../components/about-extra"
-
+import HomeWork from "../components/home-work"
 const IndexPage = () => {
   return (
     <>
@@ -14,6 +14,7 @@ const IndexPage = () => {
       <HomeHeader />
       <AboutExtra />
       <BrokenWork />
+      {/* <HomeWork /> */}
       <LowerAbout />
       <Footer />
 

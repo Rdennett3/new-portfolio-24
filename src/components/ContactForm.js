@@ -11,7 +11,7 @@ const ContactForm = () => {
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
-                alert('Message Sent Successfully')
+                alert('Message Recieved! I will be in touch shortly!')
             }, (error) => {
                 console.log(error.text);
                 alert('Something went wrong!')

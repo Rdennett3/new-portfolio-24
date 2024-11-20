@@ -49,7 +49,7 @@ const HomeWork = () => {
                         <div className="work-section-item">
                             <img src={Excelsior} alt="" />
                             <div className="item-info">
-                                <h1 className="name">Excelsior Wood Shop</h1>
+                                <h1>Excelsior Wood Shop</h1>
                             </div>
                         </div>
                         <div className="work-section-item">
