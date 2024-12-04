@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Water from '../images/water.webp'
-import Fall from "../images/fall.webp"
+import Winter from "../images/winter.webp"
 const HomeHeader = () => {
 
     const app = useRef < HTMLDivElement > (null);
@@ -41,7 +41,7 @@ const HomeHeader = () => {
                     </div>
                 </div>
                 <div className="new-header-item">
-                    <img src={Fall} alt="" id="water" />
+                    <img src={Winter} alt="" id="water" />
                 </div>
             </section>
         </>

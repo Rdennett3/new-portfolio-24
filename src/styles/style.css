@@ -1205,21 +1205,22 @@ span {
 .scrolling-text-container {
     width: 100%;
     height: auto;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     background: var(--white);
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
-    padding-top: 20%;
+    padding-top: 10%;
 }
 
 .scrolling-text-wrapper {
-    width: var(--inner-width);
-    max-width: var(--max-width);
-    padding: 5% 0;
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 25%;
 }
 
 .scrolling-text-wrapper h2 {
@@ -1234,4 +1235,16 @@ span {
     100% {
         transform: translate(-100%, 0);
     }
+}
+
+/* TESTING PAGE TRANSITIONS */
+
+.layout {
+    position: relative;
+    overflow: hidden;
+}
+
+.motion-div {
+    position: absolute;
+    width: 100%;
 }

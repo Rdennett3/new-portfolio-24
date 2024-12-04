@@ -1,4 +1,4 @@
-// gatsby-browser.js and gatsby-ssr.js
+// gatsby-ssr.js
 import React from "react";
 import Layout from "./src/components/Layout";
 

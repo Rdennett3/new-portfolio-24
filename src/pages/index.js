@@ -13,7 +13,7 @@ const IndexPage = () => {
       <Header />
       <HomeHeader />
       <AboutExtra />
-      {/* <SlidingText /> */}
+      <SlidingText />
       <BrokenWork />
       <LowerAbout />
       <Footer />

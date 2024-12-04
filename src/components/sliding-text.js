@@ -1,54 +1,55 @@
-import * as React from "react"
-import { useEffect, useRef } from "react"
+import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const SlidingText = () => {
-    const app = useRef < HTMLDivElement > (null);
+gsap.registerPlugin(ScrollTrigger);
+
+const ScrollingText = () => {
+    const racesRef = useRef(null); // Reference to the scrolling text wrapper
+    const containerRef = useRef(null); // Reference to the container
+
     useEffect(() => {
-        // Select the scrolling text container
-        gsap.registerPlugin(ScrollTrigger);
+        const races = racesRef.current;
 
-        // const outerContainer = document.querySelector('.scrolling-text-container');
-        // const pinDuration = outerContainer.offsetHeight;
+        function getScrollAmount() {
+            let racesWidth = races.scrollWidth;
+            return -(racesWidth - window.innerWidth);
+        }
 
-        // ScrollTrigger.create({
-        //     trigger: ".scrolling-text-container",
-        //     start: "top top",
-        //     end: `+=${pinDuration}px`,
-        //     pin: true,
-        // });
+        const tween = gsap.to(races, {
+            x: getScrollAmount,
+            duration: 3,
+            ease: "none",
+        });
 
-        let scrollermm = gsap.matchMedia();
+        const scrollTrigger = ScrollTrigger.create({
+            trigger: containerRef.current,
+            start: "top 20%",
+            end: () => `+=${getScrollAmount() * -2}`,
+            pin: true,
+            animation: tween,
+            scrub: 1,
+            invalidateOnRefresh: true,
+        });
 
-        scrollermm.add("(min-width:900px)", () => {
-            let tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: ".scrolling-text-container",
-                    start: "top 70%",
-                    end: "top 20%",
-                    scrub: 1,
-                    pin: true,
-                }
-            });
-            tl.from(".scroll", {
-                x: '100%',
-            });
-            tl.to(".scroll", {
-                x: '-100%'
-            })
-        })
-    }, [])
+        // Clean up on component unmount
+        return () => {
+            scrollTrigger.kill();
+            tween.kill();
+        };
+    }, []);
+
     return (
         <>
-            <div class="scrolling-text-container">
-                <div class="scrolling-text-wrapper">
-                    <h1 className="scroll name-2">HTML - CSS - JavaScript - Wordpress - Shopify - PHP - Liquid - React - Gatsby - GSAP - AWS - Accessibility - Project Management</h1>
+            <div className="scrolling-text-pin-wrapper">
+                <div className="scrolling-text-container" ref={containerRef}>
+                    <div className="scrolling-text-wrapper" ref={racesRef}>
+                        <h1 className="scroll name-2">HTML - CSS - JavaScript - Wordpress - Shopify - PHP - Liquid - React - Gatsby - GSAP - AWS - Accessibility - Project Management</h1>
+                    </div>
                 </div>
             </div>
-
         </>
-    )
-}
+    );
+};
 
-export default SlidingText
+export default ScrollingText;
