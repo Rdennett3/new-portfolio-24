@@ -28,6 +28,31 @@ const BrokenWork = () => {
                 })
         })
 
+        const work = gsap.utils.toArray('.work-card');
+        work.forEach((work, i) => {
+            const workanim = gsap.fromTo(
+                work,
+                {
+                    autoAlpha: 0,
+                    y: 250,
+                    rotate: -5,
+                },
+                {
+                    duration: 2,
+                    autoAlpha: 1,
+                    y: 0,
+                    rotate: 0,
+                }
+            );
+
+            ScrollTrigger.create({
+                trigger: work,
+                start: 'top bottom+=100',
+                animation: workanim,
+                delay: i * 0.2, // Manual stagger by index
+            });
+        });
+
     }, [])
     return (
         <>
@@ -38,25 +63,55 @@ const BrokenWork = () => {
                     </div>
                     <div className="work-new-item">
                         <div className="work-card">
-                            <h1>Excelsior Wood Shop</h1>
+                            {/* <img src={Excelsior} alt="excelsior wood shop" /> */}
+                            <div className="work-info">
+                                <h1>Excelsior Wood Shop</h1>
+                                <p className="tech">Shopify | Development</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
                         </div>
                         <div className="work-card">
-                            <h1>Personal Paws</h1>
+                            {/* <img src={Ppaws} alt="personal paws" /> */}
+                            <div className="work-info">
+                                <h1>Personal Paws</h1>
+                                <p className="tech">Shopify | Design | Development</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
                         </div>
                         <div className="work-card">
-                            <h1>Nam Knights M.C.</h1>
+                            <div className="work-info">
+                                <h1>Nam Knights M.C.</h1>
+                                <p className="tech">Shopify | Development</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
                         </div>
                         <div className="work-card">
-                            <h1>NABA</h1>
+                            <div className="work-info">
+                                <h1>NABA</h1>
+                                <p className="tech">Wordpress | Development</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
                         </div>
                         <div className="work-card">
-                            <h1>NEPA FCU</h1>
+                            <div className="work-info">
+                                <h1>NEPA FCU</h1>
+                                <p className="tech">Concrete CMS | Development</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
                         </div>
                         <div className="work-card">
-                            <h1>NYCUF</h1>
+                            <div className="work-info">
+                                <h1>NYCUF</h1>
+                                <p className="tech">Concrete CMS | Development</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
                         </div>
                         <div className="work-card">
-                            <h1>NYCUA</h1>
+                            <div className="work-info">
+                                <h1>NYCUA</h1>
+                                <p className="tech">Concrete CMS | Development</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

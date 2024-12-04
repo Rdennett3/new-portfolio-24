@@ -11,16 +11,7 @@ const LowerAbout = () => {
     }, [])
     return (
         <>
-            <section className="lower-about-container" id="pier">
-                <div className="lower-about-wrapper">
-                    <div className="lower-about-item">
-                        <img src={Pier} alt="" />
-                    </div>
-                    <div className="lower-about-item">
-                        <p className="laptop">Outside of work I enjoy Cooking, Hiking, Camping, Snowboarding, Martial Arts, trying new restaurants, reading, and attempting to get a green thumb - I am getting better, I swear.</p>
-                    </div>
-                </div>
-            </section>
+
         </>
     )
 }

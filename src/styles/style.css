@@ -9,6 +9,7 @@
 html,
 body {
     overflow-x: hidden;
+    background: var(--white);
 }
 
 body {
@@ -26,6 +27,7 @@ h4 {
 }
 
 :root {
+    --claret: #840032;
     --white: #F9FBF2;
     --neon: #E0FF4F;
     --lime: #D2FF28;
@@ -881,9 +883,10 @@ span {
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: minmax(350px, auto);
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    /* grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: minmax(350px, auto); */
+    gap: 2em;
 }
 
 @media screen and (max-width:750px) {
@@ -895,19 +898,41 @@ span {
 .work-card {
     width: 100%;
     height: auto;
-    min-height: 250px;
-    background: var(--charcoal);
+    min-height: 50vh;
+    background: var(--white);
     border-radius: 25px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* position: relative; */
+    border: 5px solid var(--charcoal);
+    box-shadow: 10px 10px 0px var(--charcoal);
+}
+
+.work-info {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2.5% 0;
 }
 
 .work-card h1 {
-    color: var(--neon);
+    color: var(--charcoal);
 }
 
-.work-card:nth-of-type(1) {
+.work-card p {
+    color: var(--charcoal);
+}
+
+.tech {
+    margin-bottom: 10px;
+    font-size: 1.11em;
+}
+
+/* .work-card:nth-of-type(1) {
     grid-column: 1 / 6;
     grid-row: 1;
 }
@@ -940,7 +965,7 @@ span {
 .work-card:nth-of-type(7) {
     grid-column: 6 / 9;
     grid-row: 3;
-}
+} */
 
 
 
@@ -1084,58 +1109,7 @@ span {
     font-weight: 400;
 }
 
-.lower-about-container {
-    width: 100%;
-    height: auto;
-    border-radius: 50px;
-    /* border-top-left-radius: 50px;
-    border-top-right-radius: 50px; */
-    /* background: var(--beige); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5% 0;
-    background: var(--charcoal);
-}
 
-.lower-about-wrapper {
-    width: var(--inner-width);
-    max-width: var(--max-width);
-    height: auto;
-}
-
-.lower-about-item .about-name {
-    font-size: 5vw;
-    line-height: 1em;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    text-align: center;
-    color: var(--neon);
-    font-weight: 200;
-}
-
-.lower-about-item:nth-of-type(2) {
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.lower-about-item p {
-    font-size: 2em;
-    color: var(--white);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-}
-
-.lower-about-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 25px;
-}
 
 /* 404 PAGE STYLES */
 
@@ -1187,7 +1161,7 @@ span {
 
 /* horizontal scroll text area */
 
-.horizontal-container {
+/* .horizontal-container {
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
@@ -1197,6 +1171,7 @@ span {
     background: var(--white);
     border: 2px solid red;
     padding-left: 10%;
+    min-height: 20vh;
 }
 
 .horizontal-wrapper {
@@ -1209,4 +1184,54 @@ span {
 .horizontal-wrapper span {
     font-size: 2em;
     font-family: "norman-variable", sans-serif;
+} */
+
+/* .scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+}
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    will-change: transform;
+    color: black;
+} */
+
+.scrolling-text-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding-top: 20%;
+}
+
+.scrolling-text-wrapper {
+    width: var(--inner-width);
+    max-width: var(--max-width);
+    padding: 5% 0;
+}
+
+.scrolling-text-wrapper h2 {
+    color: var(--charcoal);
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
 }

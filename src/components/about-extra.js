@@ -24,7 +24,7 @@ const AboutExtra = () => {
             });
             tl.from("#extra-images img", {
                 duration: 1,
-                x: 100,
+                y: 100,
                 autoAlpha: 0,
                 stagger: .15
             })

@@ -6,15 +6,15 @@ import BrokenWork from "../components/work-broken"
 import LowerAbout from "../components/lower-about"
 import Footer from "../components/footer"
 import AboutExtra from "../components/about-extra"
-import HomeWork from "../components/home-work"
+import SlidingText from "../components/sliding-text"
 const IndexPage = () => {
   return (
     <>
       <Header />
       <HomeHeader />
       <AboutExtra />
+      {/* <SlidingText /> */}
       <BrokenWork />
-      {/* <HomeWork /> */}
       <LowerAbout />
       <Footer />
 
