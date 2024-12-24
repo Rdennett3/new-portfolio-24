@@ -7,15 +7,16 @@ import LowerAbout from "../components/lower-about"
 import Footer from "../components/footer"
 import AboutExtra from "../components/about-extra"
 import SlidingText from "../components/sliding-text"
+import ContactCta from "../components/contact-cta"
 const IndexPage = () => {
   return (
     <>
       <Header />
       <HomeHeader />
       <AboutExtra />
-      <SlidingText />
       <BrokenWork />
-      <LowerAbout />
+      <SlidingText />
+      <ContactCta />
       <Footer />
 
     </>

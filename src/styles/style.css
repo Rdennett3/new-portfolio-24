@@ -1248,3 +1248,39 @@ span {
     position: absolute;
     width: 100%;
 }
+
+/* CONTACT CTA STYLES */
+
+.contact-cta-container {
+    width: 100%;
+    height: auto;
+    padding: 2.5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.contact-cta-wrapper {
+    width: var(--inner-width);
+    max-width: var(--max-width);
+    background: var(--charcoal);
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50px;
+}
+
+.contact-cta-wrapper .name-2 {
+    color: var(--white);
+}
+
+.contact-btn {
+    padding: 10px 30px;
+    background: var(--white);
+    color: var(--charcoal);
+    border: 1px solid var(--white);
+}

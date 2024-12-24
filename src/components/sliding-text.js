@@ -18,7 +18,7 @@ const ScrollingText = () => {
 
         const tween = gsap.to(races, {
             x: getScrollAmount,
-            duration: 3,
+            duration: 4,
             ease: "none",
         });
 
