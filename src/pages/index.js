@@ -8,14 +8,16 @@ import Footer from "../components/footer"
 import AboutExtra from "../components/about-extra"
 import SlidingText from "../components/sliding-text"
 import ContactCta from "../components/contact-cta"
+import NewWork from "../components/new-work"
 const IndexPage = () => {
   return (
     <>
       <Header />
       <HomeHeader />
       <AboutExtra />
-      <BrokenWork />
+      {/* <BrokenWork /> */}
       <SlidingText />
+      <NewWork />
       <ContactCta />
       <Footer />
 
