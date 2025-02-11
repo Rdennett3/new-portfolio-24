@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
     return (
         <>
             <section className="footer-container">
@@ -14,7 +15,7 @@ const Footer = () => {
                         <a href="https://github.com/Rdennett3" target="_blank" rel="noreferrer"><h1>Github</h1></a>
                     </div>
                     <div className="footer-item">
-                        <p>&copy; 2024 Bob Dennett</p>
+                        <p>© {currentYear} SYMBL Digital. All rights reserved.</p>
                     </div>
                 </div>
             </section>

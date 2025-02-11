@@ -4,6 +4,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import ContactForm from '../components/ContactForm'
 import ContactHeader from '../components/contact-header'
+import Desk from "../images/desk.webp"
 const Contact = () => {
     return (
         <>
@@ -13,9 +14,6 @@ const Contact = () => {
                 <div className="contact-wrapper">
                     <div className="contact-item">
                         <ContactForm />
-                    </div>
-                    <div className="contact-item">
-
                     </div>
                 </div>
             </div>
