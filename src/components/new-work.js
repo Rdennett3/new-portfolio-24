@@ -29,25 +29,49 @@ const NewWork = () => {
         //         })
         // })
 
-        const work = gsap.utils.toArray('.new-work-image');
-        work.forEach((work, i) => {
-            const workanim = gsap.fromTo(
+        const workodd = gsap.utils.toArray('.odd');
+        workodd.forEach((work, i) => {
+            const workanim1 = gsap.fromTo(
                 work,
                 {
-                    autoAlpha: 0,
-                    y: 250,
+                    x: -300,
+                    stagger: .25
                 },
                 {
-                    duration: 1.5,
-                    autoAlpha: 1,
-                    y: 0,
+                    duration: 1,
+                    x: 0,
+                    stagger: .25
                 }
             );
 
             ScrollTrigger.create({
-                trigger: work,
+                trigger: workodd,
                 start: 'top bottom+=100',
-                animation: workanim,
+                scrub: true,
+                animation: workanim1,
+                delay: i * 0.2, // Manual stagger by index
+            });
+        });
+
+        const workeven = gsap.utils.toArray('.even');
+        workeven.forEach((work, i) => {
+            const workanim2 = gsap.fromTo(
+                work,
+                {
+                    x: 300,
+                },
+                {
+                    duration: 1,
+                    autoAlpha: 1,
+                    x: 0,
+                }
+            );
+
+            ScrollTrigger.create({
+                trigger: workeven,
+                start: 'top bottom+=100',
+                scrub: true,
+                animation: workanim2,
                 delay: i * 0.2, // Manual stagger by index
             });
         });
@@ -79,7 +103,18 @@ const NewWork = () => {
 
     return (
         <>
-            <section className="new-work-container">
+            <section className="home-work-container">
+                <div className="home-work-wrapper">
+                    <div className="work-item odd"></div>
+                    <div className="work-item even"></div>
+                    <div className="work-item odd"></div>
+                    <div className="work-item even"></div>
+                    <div className="work-item odd"></div>
+                    <div className="work-item even"></div>
+                </div>
+            </section>
+
+            {/* <section className="new-work-container">
                 <div className="new-work-wrapper">
                     <div className="new-work-item">
                         <div className="new-work-inner">
@@ -152,7 +187,7 @@ const NewWork = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </>
     )
 }
