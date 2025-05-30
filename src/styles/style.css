@@ -1,5 +1,4 @@
 @import url("https://use.typekit.net/cqb5tzz.css");
-@import url("https://use.typekit.net/oni4uuf.css");
 
 * {
     margin: 0;
@@ -14,8 +13,8 @@ body {
 
 body {
     /* font-family: 'Roboto', sans-serif; */
-    font-family: "akzidenz-grotesk-next-pro", sans-serif;
-    font-weight: 500;
+    font-family: "slipstream-d", sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -23,7 +22,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'akzidenz-grotesk-next-conden', sans-serif;
+    font-family: "slipstream-d", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
@@ -792,6 +791,7 @@ span {
     justify-content: center;
     min-height: 75vh;
     background: var(--main-bg);
+    border-radius: 25px;
 }
 
 .work-item:nth-of-type(1) {
@@ -857,3 +857,5 @@ span {
         grid-area: 5 / 1 / 6 / 6;
     }
 }
+
+/* NEW WORK MAY 2025 END*/
