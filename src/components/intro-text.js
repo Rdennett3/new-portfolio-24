@@ -9,11 +9,13 @@ const IntroText = () => {
         if (textRef.current) {
             const introtext = new SplitType(textRef.current, { types: "chars, words" });
 
-            gsap.from(introtext.chars, {
+            gsap.from(introtext.words, {
                 opacity: 0,
-                y: 50,
-                stagger: 0.06,
+                height: 0,
+                stagger: 0.15,
                 ease: "power2.out",
+                delay: 1,
+                duration: 1.5,
             });
         }
     }, []);
@@ -21,7 +23,7 @@ const IntroText = () => {
     return (
         <>
             <div className="intro-area">
-                <h1 ref={textRef} className="intro-text name">Bob Dennett</h1>
+                <h1 className="name" ref={textRef}>Bob Dennett</h1>
             </div>
         </>
     );

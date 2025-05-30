@@ -15,7 +15,7 @@ const Footer = () => {
                         <a href="https://github.com/Rdennett3" target="_blank" rel="noreferrer"><h1>Github</h1></a>
                     </div>
                     <div className="footer-item">
-                        <p>© {currentYear} SYMBL Digital. All rights reserved.</p>
+                        <p>© {currentYear} Bob Dennett. All rights reserved.</p>
                     </div>
                 </div>
             </section>

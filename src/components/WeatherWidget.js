@@ -67,7 +67,7 @@ const WeatherWidget = () => {
                     )}
                 </div>
             ) : (
-                !error && <h2>Loading...</h2>
+                !error && <h2 className="loading">Loading...</h2>
             )}
         </div>
     );

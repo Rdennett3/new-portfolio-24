@@ -5,8 +5,9 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import AboutExtra from "../components/about-extra"
 import SlidingText from "../components/sliding-text"
-import NewWork from "../components/new-work"
 import IntroText from "../components/intro-text"
+import WorkMay from "../components/work-may-2025"
+
 const IndexPage = () => {
   return (
     <>
@@ -15,7 +16,7 @@ const IndexPage = () => {
       <HomeHeader />
       <AboutExtra />
       <SlidingText />
-      <NewWork />
+      <WorkMay />
       <Footer />
 
     </>

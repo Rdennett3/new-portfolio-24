@@ -31,34 +31,10 @@ const NewWork = () => {
 
         const workodd = gsap.utils.toArray('.odd');
         workodd.forEach((work, i) => {
-            const workanim1 = gsap.fromTo(
+            const workanim = gsap.fromTo(
                 work,
                 {
                     x: -300,
-                    stagger: .25
-                },
-                {
-                    duration: 1,
-                    x: 0,
-                    stagger: .25
-                }
-            );
-
-            ScrollTrigger.create({
-                trigger: workodd,
-                start: 'top bottom+=100',
-                scrub: true,
-                animation: workanim1,
-                delay: i * 0.2, // Manual stagger by index
-            });
-        });
-
-        const workeven = gsap.utils.toArray('.even');
-        workeven.forEach((work, i) => {
-            const workanim2 = gsap.fromTo(
-                work,
-                {
-                    x: 300,
                 },
                 {
                     duration: 1,
@@ -68,13 +44,34 @@ const NewWork = () => {
             );
 
             ScrollTrigger.create({
-                trigger: workeven,
+                trigger: workodd,
                 start: 'top bottom+=100',
-                scrub: true,
-                animation: workanim2,
-                delay: i * 0.2, // Manual stagger by index
+                animation: workanim,
+                delay: i * 0.6, // Manual stagger by index
             });
         });
+
+        // const workanim = gsap.utils.toArray('.odd');
+        // work.forEach((work, i) => {
+        //     const workanim = gsap.fromTo(
+        //         work,
+        //         {
+        //             x: -300,
+        //         },
+        //         {
+        //             duration: 1,
+        //             autoAlpha: 1,
+        //             x: 0,
+        //         }
+        //     );
+
+        //     ScrollTrigger.create({
+        //         trigger: work,
+        //         start: 'top bottom+=100',
+        //         animation: workanim,
+        //         delay: i * 0.2, // Manual stagger by index
+        //     });
+        // });
 
         // const worktext = gsap.utils.toArray('.new-work-text');
         // worktext.forEach((worktext, i) => {
@@ -105,12 +102,42 @@ const NewWork = () => {
         <>
             <section className="home-work-container">
                 <div className="home-work-wrapper">
-                    <div className="work-item odd"></div>
-                    <div className="work-item even"></div>
-                    <div className="work-item odd"></div>
-                    <div className="work-item even"></div>
-                    <div className="work-item odd"></div>
-                    <div className="work-item even"></div>
+                    <div className="work-item odd">
+                        <div className="work-item-wrapper">
+                            <div className="work-item-inner"></div>
+                            <div className="work-item-inner"></div>
+                        </div>
+                    </div>
+                    <div className="work-item">
+                        <div className="work-item-wrapper">
+                            <div className="work-item-inner"></div>
+                            <div className="work-item-inner"></div>
+                        </div>
+                    </div>
+                    <div className="work-item odd">
+                        <div className="work-item-wrapper">
+                            <div className="work-item-inner"></div>
+                            <div className="work-item-inner"></div>
+                        </div>
+                    </div>
+                    <div className="work-item">
+                        <div className="work-item-wrapper">
+                            <div className="work-item-inner"></div>
+                            <div className="work-item-inner"></div>
+                        </div>
+                    </div>
+                    <div className="work-item odd">
+                        <div className="work-item-wrapper">
+                            <div className="work-item-inner"></div>
+                            <div className="work-item-inner"></div>
+                        </div>
+                    </div>
+                    <div className="work-item">
+                        <div className="work-item-wrapper">
+                            <div className="work-item-inner"></div>
+                            <div className="work-item-inner"></div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

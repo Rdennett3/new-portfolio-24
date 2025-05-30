@@ -39,7 +39,7 @@ const ScrollingText = () => {
             <div className="scrolling-text-pin-wrapper">
                 <div className="scrolling-text-container" ref={containerRef}>
                     <div className="scrolling-text-wrapper" ref={racesRef}>
-                        <h1 className="scroll name-3">HTML - CSS - JavaScript - Wordpress - Shopify - PHP - Liquid - React - Gatsby - GSAP - AWS </h1>
+                        <h1 className="scroll name-3">Wordpress - Shopify - Gatsby - GSAP - AWS - Accessibility - Project Management </h1>
                     </div>
                 </div>
             </div>

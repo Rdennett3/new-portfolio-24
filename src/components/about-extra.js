@@ -26,6 +26,7 @@ const AboutExtra = () => {
                 duration: 1,
                 y: 100,
                 autoAlpha: 0,
+                transformOrigin: 'left',
                 stagger: .15
             })
         })
