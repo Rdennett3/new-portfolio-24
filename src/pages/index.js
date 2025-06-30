@@ -1,23 +1,25 @@
 import * as React from "react"
 import "../styles/style.css"
-import HomeHeader from "../components/home-header"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import AboutExtra from "../components/about-extra"
 import SlidingText from "../components/sliding-text"
-import IntroText from "../components/intro-text"
 import WorkMay from "../components/work-may-2025"
 import AnimatedLines from "../components/intro-text"
+import Intro from "../components/intro"
+import HomepageAboutText from "../components/homepage-about-text"
+import StickyColorScroll from "../components/pinned-list"
 
 const IndexPage = () => {
   return (
     <>
       <Header />
       <AnimatedLines />
-      <HomeHeader />
+      <Intro />
+      <HomepageAboutText />
       <AboutExtra />
       <SlidingText />
-      <WorkMay />
+      <StickyColorScroll />
       <Footer />
 
     </>

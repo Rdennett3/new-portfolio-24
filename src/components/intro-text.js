@@ -37,9 +37,12 @@ const IntroText = () => {
     }, []);
 
     return (
-        <div className="intro-area">
-            <h1 className="name" ref={textRef}>Bob Dennett</h1>
-        </div>
+        <>
+            <div className="intro-area">
+                <h1 className="name" ref={textRef}>Bob Dennett</h1>
+            </div>
+        </>
+
     );
 };
 
