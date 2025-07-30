@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import "../css/Footer.css"
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();

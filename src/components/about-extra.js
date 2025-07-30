@@ -3,11 +3,12 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import "../styles/style.css"
-import Cheyanne from '../images/cheyanne.png'
-import Nala from '../images/nala.png'
-import Otis from '../images/otis.png'
-import Fire from '../images/fire.webp'
-import Vacation from '../images/vacation.png'
+import "../css/AboutExtra.css"
+import Cheyanne from '../images/webp/cheyanne.webp'
+import Nala from '../images/webp/nala.webp'
+import Fire from '../images/webp/fire.webp'
+import Vacation from '../images/webp/vacation.webp'
+import Otis from "../images/webp/otis.webp"
 const AboutExtra = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +18,7 @@ const AboutExtra = () => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#extra-images",
-                    start: "top 45%",
+                    start: "top 80%",
                     end: "top top",
                     // markers: true,
                 }
@@ -34,8 +35,8 @@ const AboutExtra = () => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#header-image",
-                    start: "top 50%",
-                    end: "top top",
+                    start: "top 80%",
+                    end: "top 70%",
                     // scrub:true,
                 }
             });

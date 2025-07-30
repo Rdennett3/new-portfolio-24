@@ -1,48 +1,51 @@
 import React, { useEffect, useRef } from "react";
-import SplitType from "split-type";
 import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+
+gsap.registerPlugin(SplitText);
 
 const IntroText = () => {
     const textRef = useRef(null);
 
     useEffect(() => {
-        if (textRef.current) {
-            // Split text into words
-            const introtext = new SplitType(textRef.current, { types: "words" });
+        if (!textRef.current) return;
 
-            // Wrap each word in a container for masking
-            introtext.words.forEach((word) => {
-                const wrapper = document.createElement("span");
-                wrapper.style.overflow = "hidden";
-                wrapper.style.display = "inline-block";
+        // Split text into words
+        const split = new SplitText(textRef.current, {
+            type: "words",
+        });
 
-                // Set block display for the animated word
-                word.style.display = "inline-block";
-                word.style.transform = "translateY(100%)";
+        // Wrap each word in a container for masking
+        split.words.forEach((word) => {
+            const wrapper = document.createElement("span");
+            wrapper.style.overflow = "hidden";
+            wrapper.style.display = "inline-block";
 
-                // Wrap word inside the wrapper
-                word.parentNode.insertBefore(wrapper, word);
-                wrapper.appendChild(word);
-            });
+            word.style.display = "inline-block";
+            word.style.transform = "translateY(100%)";
 
-            // Animate each word to slide up like a curtain
-            gsap.to(introtext.words, {
-                y: 0,
-                ease: "power4.out",
-                stagger: 0.25,
-                delay: 0.5,
-                duration: 1,
-            });
-        }
+            word.parentNode.insertBefore(wrapper, word);
+            wrapper.appendChild(word);
+        });
+
+        // Animate each word to slide up like a curtain
+        gsap.to(split.words, {
+            y: 0,
+            ease: "power4.out",
+            stagger: 0.25,
+            delay: .25,
+            duration: 1,
+        });
+
+        return () => {
+            split.revert(); // Restore original DOM
+        };
     }, []);
 
     return (
-        <>
-            <div className="intro-area">
-                <h1 className="name" ref={textRef}>Bob Dennett</h1>
-            </div>
-        </>
-
+        <div className="intro-area">
+            <h1 className="name" ref={textRef}>Bob Dennett</h1>
+        </div>
     );
 };
 

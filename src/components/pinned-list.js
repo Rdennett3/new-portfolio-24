@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../css/ScrollSync.css";
@@ -6,18 +6,44 @@ import "../css/ScrollSync.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const sections = [
-    { title: "EagleHawk", image: "/images/work/bw/excelsior.png" },
-    { title: "Salt City FCU", image: "/images/work/bw/naba-square.png" },
-    { title: "NEPA FCU", image: "/images/work/bw/nycua-new.png" },
-    { title: "Personal Paws", image: "/images/work/bw/ppaws-new.png" },
-    { title: "Nam Knights", image: "/images/work/bw/nepa-square.png" },
-    { title: "NYCUA", image: "/images/work/bw/nycuf-square.png" },
+    {
+        title: "EagleHawk",
+        image: "../images/bw/excelsior.png",
+        buttonText: "Visit Site",
+        buttonUrl: "https://eaglehawk.io"
+    },
+    {
+        title: "Salt City FCU",
+        image: "/images/bw/naba-square.png",
+        buttonText: "Visit Site",
+        buttonUrl: "https://saltcityfcu.org"
+    },
+    {
+        title: "Personal Paws",
+        image: "/images/bw/ppaws-new.png",
+        buttonText: "Visit Site",
+        buttonUrl: "https://personal-paws.net"
+    },
+    {
+        title: "Nam Knights",
+        image: "/images/nam-knights-cropped.webp",
+        buttonText: "Visit Site",
+        buttonUrl: "https://southerntierchapter.com"
+    },
+    {
+        title: "NYCUA",
+        image: "/images/bw/nycuf-square.png",
+        buttonText: "Visit Site",
+        buttonUrl: "https://nycua.org"
+    },
 ];
 
 const ScrollSync = () => {
     const wrapperRef = useRef(null);
     const rightRef = useRef(null);
     const listRefs = useRef([]);
+    const [activeIndex, setActiveIndex] = useState(0);
+
 
     useEffect(() => {
         listRefs.current = listRefs.current.slice(0, sections.length);
@@ -42,9 +68,11 @@ const ScrollSync = () => {
             }, index);
         });
 
-        const highlight = (currentIndex) => {
+        const highlight = (index) => {
+            setActiveIndex(index); // sets which section's data is active
+
             listRefs.current.forEach((el, i) => {
-                el.classList.toggle("active", i === currentIndex);
+                el.classList.toggle("active", i === index);
             });
         };
 
@@ -70,7 +98,15 @@ const ScrollSync = () => {
                     </ul>
                 </div>
                 <div className="scroll-right" ref={rightRef}>
-                    <p>Right side background updates</p>
+                    {/* <p>this will be the title</p> */}
+                    <a
+                        href={sections[activeIndex].buttonUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="scroll-btn"
+                    >
+                        {sections[activeIndex].buttonText}
+                    </a>
                 </div>
             </div>
         </div>

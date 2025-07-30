@@ -4,7 +4,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import ContactForm from '../components/ContactForm'
 import ContactHeader from '../components/contact-header'
-import Desk from "../images/desk.webp"
 const Contact = () => {
     return (
         <>
