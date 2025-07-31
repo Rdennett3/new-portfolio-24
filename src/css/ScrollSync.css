@@ -89,7 +89,7 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: background-image 0.6s ease-in-out;
-    background: linear-gradient(to right, var(--citrine), var(--crayola));
+    /* background: linear-gradient(to right, var(--citrine), var(--crayola)); */
     border: 2px solid var(--dark);
 }
 
