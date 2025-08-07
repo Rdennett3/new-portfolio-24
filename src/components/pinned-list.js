@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 const sections = [
     {
         title: "EagleHawk",
-        image: "../images/bw/excelsior.png",
+        image: "/images/bw/excelsior.png",
         buttonText: "Visit Site",
         buttonUrl: "https://eaglehawk.io"
     },
