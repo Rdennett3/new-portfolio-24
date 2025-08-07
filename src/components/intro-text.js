@@ -33,7 +33,7 @@ const IntroText = () => {
             y: 0,
             ease: "power4.out",
             stagger: 0.25,
-            delay: .25,
+            delay: .5,
             duration: 1,
         });
 
@@ -44,7 +44,9 @@ const IntroText = () => {
 
     return (
         <div className="intro-area">
-            <h1 className="name" ref={textRef}>Bob Dennett</h1>
+            <div className="intro-area-wrapper">
+                <h1 className="name" ref={textRef}>Bob <br /> Dennett</h1>
+            </div>
         </div>
     );
 };

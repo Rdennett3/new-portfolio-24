@@ -12,8 +12,8 @@ body {
 }
 
 body {
-    font-family: "acier-bat-solid", sans-serif;
-    font-weight: 400;
+    font-family: avenir-next-lt-pro, sans-serif;
+    font-weight: 500;
     font-style: normal;
     font-size: 22px;
     margin: 0;
@@ -25,7 +25,7 @@ h2,
 h3,
 h4 {
     font-family: avenir-next-lt-pro, sans-serif;
-    font-weight: 900;
+    font-weight: 800;
     font-style: normal;
 }
 
@@ -116,7 +116,7 @@ h1 {
     gap: 1em;
     background: var(--main-bg);
     padding: 0 5%;
-    border: 2px solid var(--main-txt);
+    border: 2px solid var(--dark);
     margin-top: 2%;
     border-radius: 25px;
 }
@@ -248,12 +248,13 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: hsla(152, 100%, 50%, 1);
+    padding: 15% 0;
+    /* background: hsla(152, 100%, 50%, 1);
     background: linear-gradient(to right, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
     background: -moz-linear-gradient(to right, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
     background: -webkit-linear-gradient(to right, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#00FF87", endColorstr="#60EFFF", GradientType=1);
-    min-height: 100vh;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#00FF87", endColorstr="#60EFFF", GradientType=1); */
+    /* min-height: 100vh; */
 }
 
 .intro-area .word-wrapper {
@@ -261,17 +262,23 @@ h1 {
     display: inline-block;
 }
 
+.intro-area-wrapper {
+    width: var(--inner-width);
+    max-width: var(--max-width);
+}
+
 .intro-area h1 {
     z-index: 20;
-    color: var(--highlight);
-    font-size: 12vw;
+    color: var(--dark);
+    font-size: 10vw;
+    line-height: .8em;
     text-transform: uppercase;
-    -webkit-text-stroke: 1px black;
+    /* -webkit-text-stroke: 1px black;
     text-shadow:
         -1px -1px 0 black,
         1px -1px 0 black,
         -1px 1px 0 black,
-        1px 1px 0 black;
+        1px 1px 0 black; */
 }
 
 .single-line {
@@ -876,11 +883,12 @@ span {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    margin-top: 10%;
 }
 
 .intro-wrapper p {
     font-size: 2.25em;
+    font-weight: 700;
+    color: var(--dark);
 }
 
 .intro-wrapper p span {

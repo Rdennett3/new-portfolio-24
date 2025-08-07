@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     /* background: var(--gradient); */
-    background: var(--raisin);
+    background: var(--dark);
     position: sticky;
     z-index: 1;
     /* border-top-left-radius: 50px;
@@ -73,7 +73,6 @@
 .footer-large {
     font-size: 10vw;
     color: var(--main-bg);
-    font-weight: 400;
 }
 
 @media screen and (max-width:900px) {
