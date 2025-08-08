@@ -68,11 +68,11 @@
     margin: 20px 0;
     opacity: 0.5;
     transition: opacity 0.3s ease;
+    font-weight: bold;
 }
 
 .scroll-item.active {
     opacity: 1;
-    font-weight: bold;
 }
 
 .scroll-right {
@@ -90,7 +90,7 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: background-image 0.6s ease-in-out;
-    /* background: linear-gradient(to right, var(--citrine), var(--crayola)); */
+    background-image: url("../images/excelsior.png");
     border: 2px solid var(--dark);
 }
 

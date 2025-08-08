@@ -8,19 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 const sections = [
     {
         title: "EagleHawk",
-        image: "/images/bw/excelsior.png",
+        image: "/images/excelsior.png",
         buttonText: "Visit Site",
         buttonUrl: "https://eaglehawk.io"
     },
     {
         title: "Salt City FCU",
-        image: "/images/bw/naba-square.png",
+        image: "/images/naba-square.png",
         buttonText: "Visit Site",
         buttonUrl: "https://saltcityfcu.org"
     },
     {
         title: "Personal Paws",
-        image: "/images/bw/ppaws-new.png",
+        image: "/images/ppaws-new.png",
         buttonText: "Visit Site",
         buttonUrl: "https://personal-paws.net"
     },
@@ -32,7 +32,7 @@ const sections = [
     },
     {
         title: "NYCUA",
-        image: "/images/bw/nycuf-square.png",
+        image: "/images/nycuf-square.png",
         buttonText: "Visit Site",
         buttonUrl: "https://nycua.org"
     },

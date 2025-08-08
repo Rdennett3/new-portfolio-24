@@ -14,11 +14,11 @@ const IndexPage = () => {
     <>
       <Header />
       <AnimatedLines />
+      <Logos />
+      <StickyColorScroll />
       <Intro />
       <AboutExtra />
       {/* <SlidingText /> */}
-      <Logos />
-      <StickyColorScroll />
       <Footer />
 
     </>
