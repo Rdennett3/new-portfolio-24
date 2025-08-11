@@ -265,14 +265,17 @@ h1 {
 .intro-area-wrapper {
     width: var(--inner-width);
     max-width: var(--max-width);
+    border-radius: 20px;
+    padding: 2.5% 0;
 }
 
 .intro-area h1 {
     z-index: 20;
     color: var(--dark);
-    font-size: 10vw;
+    font-size: 15vw;
     line-height: .8em;
     text-transform: uppercase;
+    /* text-align: center; */
     /* -webkit-text-stroke: 1px black;
     text-shadow:
         -1px -1px 0 black,
@@ -298,9 +301,9 @@ h1 {
         height: 40vh;
     }
 
-    .intro-area h1 {
+    /* .intro-area h1 {
         font-size: 5.5em;
-    }
+    } */
 }
 
 .horizontal-container {
