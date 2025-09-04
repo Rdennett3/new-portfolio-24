@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import "../styles/style.css"
 import Shopify from "../images/webp/shopify-mono-black.webp";
 import WP from "../images/webp/wp-logo.webp";
 import AWS from "../images/webp/aws.webp";

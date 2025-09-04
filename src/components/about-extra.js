@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import "../styles/style.css"
-import "../css/AboutExtra.css"
 import Cheyanne from '../images/webp/cheyanne.webp'
 import Nala from '../images/webp/nala.webp'
 import Fire from '../images/webp/fire.webp'

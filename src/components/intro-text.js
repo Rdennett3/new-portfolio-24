@@ -10,42 +10,58 @@ const IntroText = () => {
     useEffect(() => {
         if (!textRef.current) return;
 
-        // Split text into words
+        // Split into lines, words, and characters
         const split = new SplitText(textRef.current, {
-            type: "words",
+            type: "lines,words,chars",
+            linesClass: "split-line"
         });
 
-        // Wrap each word in a container for masking
-        split.words.forEach((word) => {
-            const wrapper = document.createElement("span");
+        // Make sure each line has its own container for masking (like a curtain reveal)
+        split.lines.forEach((line) => {
+            const wrapper = document.createElement("div");
             wrapper.style.overflow = "hidden";
-            wrapper.style.display = "inline-block";
+            wrapper.style.display = "block";
 
-            word.style.display = "inline-block";
-            word.style.transform = "translateY(100%)";
-
-            word.parentNode.insertBefore(wrapper, word);
-            wrapper.appendChild(word);
+            line.parentNode.insertBefore(wrapper, line);
+            wrapper.appendChild(line);
         });
 
-        // Animate each word to slide up like a curtain
-        gsap.to(split.words, {
-            y: 0,
+        // Timeline to sequence line + char animations
+        const tl = gsap.timeline({ delay: 0.1 });
+
+        // Animate lines sliding up
+        tl.from(split.lines, {
+            yPercent: 100,
             ease: "power4.out",
-            stagger: 0.25,
-            delay: .5,
             duration: 1,
+            stagger: 0.2
         });
+
+        // Animate characters inside lines with a little stagger
+        tl.from(
+            split.chars,
+            {
+                yPercent: 100,
+                opacity: 0,
+                duration: 0.4,
+                stagger: {
+                    each: 0.05,
+                }
+            },
+        );
 
         return () => {
-            split.revert(); // Restore original DOM
+            split.revert(); // Clean up on unmount
+            tl.kill();
         };
     }, []);
 
     return (
         <div className="intro-area">
             <div className="intro-area-wrapper">
-                <h1 className="name" ref={textRef}>Bob <br /> Dennett</h1>
+                <h1 className="name" ref={textRef}>
+                    Bob <br /> Dennett
+                </h1>
             </div>
         </div>
     );

@@ -3,11 +3,11 @@ import "../styles/style.css"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import AboutExtra from "../components/about-extra"
-// import SlidingText from "../components/sliding-text"
 import AnimatedLines from "../components/intro-text"
 import Intro from "../components/intro"
 import StickyColorScroll from "../components/pinned-list"
 import Logos from "../components/Logos"
+import Work25 from "../components/work-sep-25"
 
 const IndexPage = () => {
   return (
@@ -15,7 +15,7 @@ const IndexPage = () => {
       <Header />
       <AnimatedLines />
       <Logos />
-      <StickyColorScroll />
+      <Work25 />
       <Intro />
       <AboutExtra />
       {/* <SlidingText /> */}

@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby";
-import "../css/Footer.css"
+import "../styles/style.css"
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
