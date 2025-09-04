@@ -42,7 +42,6 @@ const IntroText = () => {
             split.chars,
             {
                 yPercent: 100,
-                opacity: 0,
                 duration: 0.4,
                 stagger: {
                     each: 0.05,
@@ -62,6 +61,7 @@ const IntroText = () => {
                 <h1 className="name" ref={textRef}>
                     Bob <br /> Dennett
                 </h1>
+                <p>Web Developer</p>
             </div>
         </div>
     );

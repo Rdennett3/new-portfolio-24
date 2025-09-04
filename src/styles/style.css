@@ -226,7 +226,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10% 0;
+    padding: 2.5% 0;
     /* background: hsla(152, 100%, 50%, 1);
     background: linear-gradient(to right, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
     background: -moz-linear-gradient(to right, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
@@ -245,12 +245,22 @@ h1 {
     max-width: var(--max-width);
     border-radius: 20px;
     padding: 2.5% 0;
+    border: 2px solid var(--dark);
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('../images/autumn.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .intro-area h1 {
     z-index: 20;
-    color: var(--dark);
-    font-size: 15vw;
+    color: var(--main-bg);
+    font-size: 10vw;
     line-height: .8em;
     text-transform: uppercase;
     /* text-align: center; */
@@ -260,6 +270,12 @@ h1 {
         1px -1px 0 black,
         -1px 1px 0 black,
         1px 1px 0 black; */
+}
+
+.intro-area-wrapper p {
+    color: var(--main-bg);
+    margin-top: 20px;
+    font-size: 2.5em;
 }
 
 .single-line {
@@ -892,7 +908,8 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 2.5%;
+    padding: 2.5% 0;
+    /* padding-bottom: 2.5%; */
 }
 
 .logo-wrapper {
