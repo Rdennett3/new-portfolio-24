@@ -16,10 +16,9 @@ const Logos = () => {
     useEffect(() => {
         const items = containerRef.current.querySelectorAll(".logo-item");
 
-        const mq = window.matchMedia("(min-width: 768px)"); // example breakpoint
-
+        const mq = window.matchMedia("(min-width: 768px)");
         if (mq.matches) {
-            // Large screens: Animate all items together with stagger, one ScrollTrigger
+
 
             gsap.from(items, {
                 y: 50,
@@ -34,7 +33,6 @@ const Logos = () => {
                 },
             });
         } else {
-            // Small screens: Animate items individually as they come into view
 
             items.forEach((item) => {
                 gsap.from(item, {
