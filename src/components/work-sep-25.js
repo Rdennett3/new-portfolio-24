@@ -23,6 +23,9 @@ const Work25 = () => {
                     <div className="work-sep-item">
                         <div className="work-sep-item-lower"></div>
                     </div>
+                    <div className="work-sep-item">
+                        <div className="work-sep-item-lower"></div>
+                    </div>
                 </div>
             </section>
         </>

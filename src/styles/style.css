@@ -229,7 +229,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2.5% 0;
     /* background: hsla(152, 100%, 50%, 1);
     background: linear-gradient(to right, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
     background: -moz-linear-gradient(to right, hsla(152, 100%, 50%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
@@ -244,20 +243,19 @@ h1 {
 }
 
 .intro-area-wrapper {
-    width: var(--inner-width);
-    max-width: var(--max-width);
-    border-radius: 20px;
-    padding: 2.5% 0;
-    border: 2px solid var(--dark);
-    min-height: 80vh;
+    width: 100%;
+    /* padding: 2.5% 0; */
+    min-height: 100vh;
+    /* padding-top: 10%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('../images/autumn.jpg');
+    background: var(--dark);
+    /* background-image: url('../images/autumn.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center; */
 }
 
 .intro-area h1 {
@@ -874,6 +872,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5% 0;
 }
 
 .intro-wrapper {
@@ -886,7 +885,7 @@ span {
 }
 
 .intro-wrapper p {
-    font-size: 2.25em;
+    font-size: 1.75em;
     font-weight: 700;
     color: var(--dark);
 }
@@ -920,7 +919,7 @@ span {
     max-width: var(--max-width);
     height: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas: ". . .";
     gap: 2em;
@@ -932,15 +931,11 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--dark);
-    padding: 10% 0;
-    border-radius: 25px;
-    min-height: 250px;
-    box-shadow: 10px 10px 25px var(--dark);
+    /* min-height: 250px; */
 }
 
 .logo-item img {
-    width: 50%;
+    width: 80%;
     height: auto;
 }
 
@@ -960,6 +955,11 @@ span {
         grid-template-columns: 1fr;
         grid-template-areas: ".";
     }
+
+    .logo-item img {
+        max-width: 250px;
+        margin: 20px 0;
+    }
 }
 
 /* HOMEPAGE LOGOS END */
@@ -978,8 +978,8 @@ span {
     width: var(--inner-width);
     max-width: var(--max-width);
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     gap: 1em;
 }
 
@@ -1001,35 +1001,36 @@ span {
 }
 
 .work-sep-item:nth-of-type(1) {
-    grid-area: 1 / 1 / 2 / 4;
     background-image: url('../images/nycuf-square.png');
     background-size: cover;
     background-position: center;
 }
 
 .work-sep-item:nth-of-type(2) {
-    grid-area: 1 / 4 / 2 / 6;
     background-image: url('../images/nycuf-square.png');
     background-size: cover;
     background-position: center;
 }
 
 .work-sep-item:nth-of-type(3) {
-    grid-area: 2 / 3 / 3 / 6;
     background-image: url('../images/nycuf-square.png');
     background-size: cover;
     background-position: center;
 }
 
 .work-sep-item:nth-of-type(4) {
-    grid-area: 2 / 1 / 3 / 3;
     background-image: url('../images/nycuf-square.png');
     background-size: cover;
     background-position: center;
 }
 
 .work-sep-item:nth-of-type(5) {
-    grid-area: 3 / 1 / 4 / 6;
+    background-image: url('../images/nycuf-square.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.work-sep-item:nth-of-type(6) {
     background-image: url('../images/nycuf-square.png');
     background-size: cover;
     background-position: center;
@@ -1260,4 +1261,42 @@ span {
     color: var(--dark);
     text-decoration: none;
     font-size: 1.25em;
+}
+
+/* container that will be pinned */
+.horizontal-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* wrapper: do NOT force a calc width here — let the children define scrollWidth */
+.horizontal-wrapper {
+    display: flex;
+    height: 100%;
+    gap: 2em;
+    /* width is implicitly sum of cards (100vw * N) */
+}
+
+/* each card is exactly the viewport width */
+.card {
+    flex: 0 0 50vw;
+    /* full viewport width */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    background: #ddd;
+    border-right: 1px solid #bbb;
+}
+
+/* content after the horizontal section */
+.after-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

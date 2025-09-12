@@ -68,9 +68,9 @@ const Logos = () => {
                 <div className="logo-item">
                     <img src={AWS} alt="AWS logo" />
                 </div>
-                <div className="logo-item">
+                {/* <div className="logo-item">
                     <p>Wanna talk shop, or just talk sh*t? Get in touch!</p>
-                </div>
+                </div> */}
             </div>
         </section>
     );
