@@ -11,34 +11,36 @@ const ContactForm = () => {
         emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
             .then((result) => {
                 console.log(result.text);
-                alert('Message Recieved! I will be in touch shortly!')
+                alert('Message Received! I will be in touch shortly!');
+                e.target.reset(); // ✅ moved here
             }, (error) => {
                 console.log(error.text);
-                alert('Something went wrong!')
+                alert('Something went wrong!');
             });
-        e.target.reset()
     };
+
     return (
         <div>
             <form className="formContainer" onSubmit={handleOnSubmit}>
                 <div className="formElement">
-                    <label for="from_name">Name</label>
+                    <label htmlFor="from_name">Name</label>
                     <input type="text" id="from_name" name="from_name" placeholder="Your name.." required />
                 </div>
 
                 <div className="formElement">
-                    <label>E-mail</label>
+                    <label htmlFor="from_email">E-mail</label>
                     <input type="email" id="from_email" name="from_email" placeholder="Your email.." required />
                 </div>
 
                 <div className="formElement">
-                    <label for="message">Message</label>
-                    <textarea name="message" rows="8" cols="30" placeholder="Your message.." required />
+                    <label htmlFor="message">Message</label>
+                    <textarea id="message" name="message" rows="8" cols="30" placeholder="Your message.." required />
                 </div>
-                <button type='submit' className='formButton'>Send It</button>
+
+                <button type="submit" className="formButton">Send It</button>
             </form>
         </div>
-    )
+    );
 }
 
 export default ContactForm;

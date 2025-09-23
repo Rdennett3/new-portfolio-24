@@ -3,6 +3,7 @@ import SplitType from "split-type";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/style.css";
+import Arrow from "../images/arrow-right-thin-full.svg"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,8 +22,8 @@ const Intro = () => {
         const ctx = gsap.context(() => {
             gsap.from(split.words, {
                 opacity: 0.25,
-                y: 5,
                 stagger: 2,
+                y: 1,
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: sectionRef.current,
@@ -44,8 +45,14 @@ const Intro = () => {
         <section className="intro-container" ref={sectionRef}>
             <div className="intro-wrapper">
                 <p ref={textRef}>
-                    I am a Full-stack developer with a passion for the front end and all things design, and E-comm related. Currently calling the Capital District of New York home. Outside of work I enjoy Cooking, Hiking, Camping, Snowboarding, Martial Arts, trying new restaurants, reading, and attempting to get a green thumb - I keep saying I'm getting better at it, but let's be honest...
+                    I am a Full-stack developer with a passion for the front end and all things design, and E-comm related. Outside of work I enjoy Cooking, Martial Arts, Snowboarding, Hiking, Camping, trying new restaurants, and attempting to get a green thumb - I keep saying I'm getting better at it, but if we're being honest...
                 </p>
+            </div>
+            <div className="lower-intro">
+                <a href="/contact">
+                    <h3>Get In Touch</h3>
+                    <img src={Arrow} alt="" />
+                </a>
             </div>
         </section>
     );

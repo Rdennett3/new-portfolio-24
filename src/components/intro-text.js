@@ -58,10 +58,19 @@ const IntroText = () => {
     return (
         <div className="intro-area">
             <div className="intro-area-wrapper">
-                <h1 className="name" ref={textRef}>
-                    Bob <br /> Dennett
-                </h1>
-                <p>Web Developer</p>
+                <div className="intro-area-item">
+                    <h1 className="name" ref={textRef}>
+                        Bob <br /> Dennett
+                    </h1>
+                </div>
+                <div className="intro-area-item">
+                    <div className="intro-area-item-wrapper">
+                        <div className="inner-right-item"></div>
+                        <div className="inner-right-item"></div>
+                        <div className="inner-right-item"></div>
+                        <div className="inner-right-item"></div>
+                    </div>
+                </div>
             </div>
         </div>
     );

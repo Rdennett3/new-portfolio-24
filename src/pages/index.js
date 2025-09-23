@@ -17,7 +17,7 @@ const IndexPage = () => {
       <Intro />
       <Logos />
       <Work25 />
-      <AboutExtra />
+      {/* <AboutExtra /> */}
       {/* <SlidingText /> */}
       <Footer />
 
