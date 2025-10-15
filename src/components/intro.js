@@ -23,7 +23,7 @@ const Intro = () => {
             gsap.from(split.words, {
                 opacity: 0.25,
                 stagger: 2,
-                y: 1,
+                yPercent: 20,
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: sectionRef.current,

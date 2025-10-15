@@ -8,6 +8,7 @@ import Intro from "../components/intro"
 import StickyColorScroll from "../components/pinned-list"
 import Logos from "../components/Logos"
 import Work25 from "../components/work-sep-25"
+import HorizontalScroll from "../components/horizontal-work"
 
 const IndexPage = () => {
   return (
@@ -16,7 +17,8 @@ const IndexPage = () => {
       <AnimatedLines />
       <Intro />
       <Logos />
-      <Work25 />
+      <HorizontalScroll />
+      {/* <Work25 /> */}
       {/* <AboutExtra /> */}
       {/* <SlidingText /> */}
       <Footer />

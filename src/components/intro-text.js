@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import Laptop from "../images/laptop-cropped-2.webp"
 
 gsap.registerPlugin(SplitText);
 
@@ -64,11 +65,8 @@ const IntroText = () => {
                     </h1>
                 </div>
                 <div className="intro-area-item">
-                    <div className="intro-area-item-wrapper">
-                        <div className="inner-right-item"></div>
-                        <div className="inner-right-item"></div>
-                        <div className="inner-right-item"></div>
-                        <div className="inner-right-item"></div>
+                    <div className="intro-area-item-wrapper" id="top-img">
+                        <img src={Laptop} alt="" />
                     </div>
                 </div>
             </div>
