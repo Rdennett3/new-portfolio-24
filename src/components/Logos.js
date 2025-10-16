@@ -2,11 +2,11 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/style.css"
-import Shopify from "../images/webp/shopify-mono-black.webp";
-import WP from "../images/webp/wp-logo.webp";
-import AWS from "../images/webp/aws.webp";
-import Gatsby from "../images/webp/gatsby.webp";
-import Gsap from "../images/webp/gsap.webp";
+import Shopify from "../images/white-logos/shopify-mono-white.png";
+import WP from "../images/white-logos/wp-logo.png";
+import AWS from "../images/white-logos/aws.png";
+import Gatsby from "../images/white-logos/gatsby.png";
+import Gsap from "../images/white-logos/gsap.png";
 
 gsap.registerPlugin(ScrollTrigger);
 

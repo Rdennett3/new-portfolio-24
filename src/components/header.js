@@ -16,6 +16,9 @@ const Header = () => {
                     <div className="header-item">
                         <Link to="/contact"><h2>Connect</h2></Link>
                     </div>
+                    <div className="header-item">
+
+                    </div>
                 </div>
             </section>
         </>

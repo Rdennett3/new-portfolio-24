@@ -39,16 +39,16 @@ const IntroText = () => {
         });
 
         // Animate characters inside lines with a little stagger
-        tl.from(
-            split.chars,
-            {
-                yPercent: 100,
-                duration: 0.4,
-                stagger: {
-                    each: 0.05,
-                }
-            },
-        );
+        // tl.from(
+        //     split.chars,
+        //     {
+        //         yPercent: 100,
+        //         duration: 0.4,
+        //         stagger: {
+        //             each: 0.05,
+        //         }
+        //     },
+        // );
 
         return () => {
             split.revert(); // Clean up on unmount

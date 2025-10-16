@@ -21,7 +21,7 @@ export default function HorizontalScroll() {
             ease: "none",
             scrollTrigger: {
                 trigger: container,
-                start: "top 25%",
+                start: "top 20%",
                 end: () => "+=" + totalScroll,
                 scrub: true,
                 pin: true,
@@ -35,33 +35,33 @@ export default function HorizontalScroll() {
 
     const sectionData = [
         {
-            image: "/images/ppaws-new.png",
+            image: "/images/eaglehawk.png",
             title: "EagleHawk",
-            text: "Description for section one.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://eaglehawk.io",
         },
         {
-            image: "/images/ppaws-new.png",
+            image: "/images/saltcity.png",
             title: "Salt City FCU",
-            text: "Description for section two.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://saltcityfcu.org",
         },
         {
-            image: "/images/ppaws-new.png",
+            image: "/images/bloomington.png",
             title: "Bloomington Fire Department",
-            text: "Description for section three.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://bloomingtonfiredepartment.com",
         },
         {
-            image: "/images/ppaws-new.png",
+            image: "/images/personal-paws.png",
             title: "Personal Paws",
-            text: "Description for section four.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://personal-paws.net",
         },
         {
-            image: "/images/ppaws-new.png",
+            image: "/images/nycua.png",
             title: "New York Credit Union Association",
-            text: "Description for section five.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://nycua.org",
         },
     ];
@@ -81,69 +81,13 @@ export default function HorizontalScroll() {
                         <div className="section-content">
                             <h2>{data.title}</h2>
                             <p>{data.text}</p>
-                            <a href={data.link} className="section-button">
+                            <a href={data.link} className="section-button" target="_blank">
                                 Learn More
                             </a>
                         </div>
                     </div>
                 </div>
             ))}
-            <style jsx>{`
-        .horizontal-scroll-container {
-          position: relative;
-          height: 75vh;
-          width: 100vw;
-          display: flex;
-          overflow: hidden;
-        }
-        .horizontal-section {
-          flex: 0 0 90vw;
-          height: 75vh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        .section-inner {
-          width: 80%;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 2rem;
-          align-items: center;
-        }
-        .section-image img {
-          width: 100%;
-          height: auto;
-          display: block;
-          border-radius:25px;
-        }
-        .section-content h2 {
-          margin: 0 0 1rem 0;
-          font-size: 1.8rem;
-        }
-        .section-content p {
-          margin-bottom: 1rem;
-        }
-        .section-button {
-          display: inline-block;
-          padding: 0.6rem 1.2rem;
-          background: #000;
-          color: #fff;
-          text-decoration: none;
-        }
-        @media (max-width: 768px) {
-          .horizontal-section {
-            flex: 0 0 100vw;
-          }
-          .section-inner {
-            grid-template-columns: 1fr;
-            text-align: center;
-          }
-          .section-image img {
-            max-width: 80%;
-            margin: 0 auto;
-          }
-        }
-      `}</style>
         </section>
     );
 }
