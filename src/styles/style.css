@@ -1380,6 +1380,30 @@ span {
 
 /* NEW HORIZONTAL SCROLL WORK SECTION */
 
+.work-title {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-title-wrapper {
+    width: var(--inner-width);
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5% 0;
+}
+
+.work-title-wrapper h2 {
+    color: var(--brown);
+    font-size: 10vw;
+    opacity: .25;
+    line-height: .85em;
+}
+
 .horizontal-scroll-container {
     position: relative;
     height: 75vh;
@@ -1401,7 +1425,7 @@ span {
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2em;
     align-items: center;
 }
 
@@ -1409,8 +1433,8 @@ span {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 10px;
-    /* border: 3px solid var(--dark); */
+    border-bottom-left-radius: 100px;
+    overflow: hidden;
 }
 
 .section-content h2 {

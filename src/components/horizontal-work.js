@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +33,8 @@ export default function HorizontalScroll() {
 
         return () => ScrollTrigger.getAll().forEach(t => t.kill());
     }, []);
+
+
 
     const sectionData = [
         {
@@ -67,27 +70,34 @@ export default function HorizontalScroll() {
     ];
 
     return (
-        <section ref={containerRef} className="horizontal-scroll-container">
-            {sectionData.map((data, i) => (
-                <div
-                    key={i}
-                    ref={el => (sectionsRef.current[i] = el)}
-                    className="horizontal-section"
-                >
-                    <div className="section-inner">
-                        <div className="section-image">
-                            <img src={data.image} alt={data.title} />
-                        </div>
-                        <div className="section-content">
-                            <h2>{data.title}</h2>
-                            <p>{data.text}</p>
-                            <a href={data.link} className="section-button" target="_blank">
-                                Learn More
-                            </a>
+        <>
+            <div className="work-title">
+                <div className="work-title-wrapper">
+                    <h2>Recent Work</h2>
+                </div>
+            </div>
+            <section ref={containerRef} className="horizontal-scroll-container">
+                {sectionData.map((data, i) => (
+                    <div
+                        key={i}
+                        ref={el => (sectionsRef.current[i] = el)}
+                        className="horizontal-section"
+                    >
+                        <div className="section-inner">
+                            <div className="section-image">
+                                <img src={data.image} alt={data.title} />
+                            </div>
+                            <div className="section-content">
+                                <h2>{data.title}</h2>
+                                <p>{data.text}</p>
+                                <a href={data.link} className="section-button" target="_blank">
+                                    Visit Site
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            ))}
-        </section>
+                ))}
+            </section>
+        </>
     );
 }
