@@ -48,7 +48,7 @@ export default function HorizontalScroll() {
         },
         {
             image: "/images/bloomington.png",
-            title: "Bloomington Fire Department",
+            title: "Bloomington FD",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://bloomingtonfiredepartment.com",
         },
@@ -60,7 +60,7 @@ export default function HorizontalScroll() {
         },
         {
             image: "/images/nycua.png",
-            title: "New York Credit Union Association",
+            title: "NYCUA",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://nycua.org",
         },

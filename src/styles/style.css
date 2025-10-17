@@ -1409,8 +1409,8 @@ span {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 20px;
-    border: 3px solid var(--dark);
+    border-radius: 10px;
+    /* border: 3px solid var(--dark); */
 }
 
 .section-content h2 {
@@ -1420,7 +1420,7 @@ span {
 }
 
 .section-content p {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
     color: var(--off-white);
     padding-right: 5%;
 }
@@ -1437,6 +1437,8 @@ span {
 @media (max-width: 768px) {
     .horizontal-section {
         flex: 0 0 100vw;
+        height: 100vh;
+        align-items: flex-start;
     }
 
     .section-inner {
@@ -1447,5 +1449,13 @@ span {
     .section-image img {
         max-width: 80%;
         margin: 0 auto;
+    }
+
+    .section-content h2 {
+        font-size: 1.15em;
+    }
+
+    .section-content p {
+        font-size: .75em;
     }
 }
