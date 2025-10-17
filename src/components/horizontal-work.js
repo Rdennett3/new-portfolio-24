@@ -2,6 +2,11 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import eaglehawk from "../images/new-work/eaglehawk.png"
+import saltcity from "../images/new-work/saltcity.png"
+import bloomington from "../images/new-work/bloomington.png"
+import personal from "../images/new-work/personal-paws.png"
+import nycua from "../images/new-work/nycua.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,31 +43,31 @@ export default function HorizontalScroll() {
 
     const sectionData = [
         {
-            image: "/images/eaglehawk.png",
+            image: eaglehawk,
             title: "EagleHawk",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://eaglehawk.io",
         },
         {
-            image: "/images/saltcity.png",
+            image: saltcity,
             title: "Salt City FCU",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://saltcityfcu.org",
         },
         {
-            image: "/images/bloomington.png",
+            image: bloomington,
             title: "Bloomington FD",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://bloomingtonfiredepartment.com",
         },
         {
-            image: "/images/personal-paws.png",
+            image: personal,
             title: "Personal Paws",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://personal-paws.net",
         },
         {
-            image: "/images/nycua.png",
+            image: nycua,
             title: "NYCUA",
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             link: "https://nycua.org",
