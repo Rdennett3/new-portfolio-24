@@ -42,6 +42,7 @@ const Intro = () => {
     }, []);
 
     return (
+
         <section className="intro-container" ref={sectionRef}>
             <div className="intro-wrapper">
                 <p ref={textRef}>

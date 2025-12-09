@@ -200,6 +200,30 @@ h1 {
     color: var(--main-bg)
 }
 
+/* NEW HOME INTRO SECTION */
+.new-intro {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10% 0 5% 0;
+}
+
+.new-intro-container {
+    width: var(--inner-width);
+    height: auto;
+    min-height: 70vh;
+}
+
+.new-intro-container h1 {
+    color: var(--main-bg);
+    font-size: 13vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: .8em;
+}
+
 .new-home-header {
     width: 100%;
     height: auto;
@@ -222,8 +246,7 @@ h1 {
 }
 
 .name {
-    font-size: 12vw;
-    ;
+    font-size: 25vw;
 }
 
 .intro-area {
@@ -340,7 +363,7 @@ h1 {
 .intro-area h1 {
     z-index: 20;
     color: var(--brown);
-    font-size: 8vw;
+    font-size: 9vw;
     line-height: .8em;
     text-transform: uppercase;
     /* text-align: center; */

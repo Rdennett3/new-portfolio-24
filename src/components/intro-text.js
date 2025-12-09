@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import Laptop from "../images/laptop-cropped-2.webp"
 
 gsap.registerPlugin(SplitText);
+gsap.registerPlugin(ScrambleTextPlugin);
 
 const IntroText = () => {
+
     const textRef = useRef(null);
 
     useEffect(() => {
@@ -39,16 +42,16 @@ const IntroText = () => {
         });
 
         // Animate characters inside lines with a little stagger
-        // tl.from(
-        //     split.chars,
-        //     {
-        //         yPercent: 100,
-        //         duration: 0.4,
-        //         stagger: {
-        //             each: 0.05,
-        //         }
-        //     },
-        // );
+        tl.from(
+            split.chars,
+            {
+                yPercent: 100,
+                duration: 0.4,
+                stagger: {
+                    each: 0.05,
+                }
+            },
+        );
 
         return () => {
             split.revert(); // Clean up on unmount
@@ -57,6 +60,7 @@ const IntroText = () => {
     }, []);
 
     return (
+
         <div className="intro-area">
             <div className="intro-area-wrapper">
                 <div className="intro-area-item">
