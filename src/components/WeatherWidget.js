@@ -6,44 +6,57 @@ const WeatherWidget = () => {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        // Get user location
+        let mounted = true; // Track whether component is still mounted
+
         const delayGeolocation = setTimeout(() => {
+            if (!mounted) return;
+
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
                     (position) => {
+                        if (!mounted) return;
                         const { latitude, longitude } = position.coords;
                         setLocation({ latitude, longitude });
                     },
-                    (error) => {
+                    () => {
+                        if (!mounted) return;
                         setError("Location access denied");
                     }
                 );
             } else {
                 setError("Geolocation is not supported by this browser.");
             }
-        }, 3000); // Delay by 3 seconds
+        }, 3000);
 
-        // Cleanup the timeout if the component is unmounted before it triggers
-        return () => clearTimeout(delayGeolocation);
+        return () => {
+            mounted = false; // prevent future state updates
+            clearTimeout(delayGeolocation);
+        };
     }, []);
 
     useEffect(() => {
-        if (location) {
-            // Fetch weather data from OpenWeatherMap
-            const API_KEY = "099379af33f749ae6c491ac300fe835c";
-            const { latitude, longitude } = location;
+        if (!location) return;
 
-            fetch(
-                `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=imperial`
-            )
-                .then((response) => response.json())
-                .then((data) => {
-                    setWeather(data);
-                })
-                .catch((error) => {
-                    setError("Error fetching weather data");
-                });
-        }
+        let mounted = true;
+        const API_KEY = "099379af33f749ae6c491ac300fe835c";
+        const { latitude, longitude } = location;
+
+        fetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=imperial`
+        )
+            .then((response) => response.json())
+            .then((data) => {
+                if (!mounted) return;
+                setWeather(data);
+            })
+            .catch(() => {
+                if (!mounted) return;
+                setError("Error fetching weather data");
+            });
+
+        return () => {
+            mounted = false; // cancel setWeather after unmount
+        };
     }, [location]);
 
     return (
@@ -51,18 +64,13 @@ const WeatherWidget = () => {
             {error && <p>{error}</p>}
             {weather ? (
                 <div className="weather-wrapper">
-                    {/* <h3>Weather in {weather.name}</h3> */}
-                    {/* Check if weather.main and weather.weather are available before rendering */}
-                    {weather.main && (
-                        <h2>{Math.round(weather.main.temp)}°F</h2>
-                    )}
+                    {weather.main && <h2>{Math.round(weather.main.temp)}°F</h2>}
                     {weather.weather && weather.weather[0] && (
                         <div>
                             <img
                                 src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                                 alt={weather.weather[0].description}
                             />
-                            {/* <p>{weather.weather[0].description}</p> */}
                         </div>
                     )}
                 </div>

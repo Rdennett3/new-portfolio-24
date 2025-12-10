@@ -45,31 +45,31 @@ export default function HorizontalScroll() {
         {
             image: eaglehawk,
             title: "EagleHawk",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            text: "",
             link: "https://eaglehawk.io",
         },
         {
             image: saltcity,
             title: "Salt City FCU",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            text: "",
             link: "https://saltcityfcu.org",
         },
         {
             image: bloomington,
             title: "Bloomington FD",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            text: "",
             link: "https://bloomingtonfiredepartment.com",
         },
         {
             image: personal,
             title: "Personal Paws",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            text: "",
             link: "https://personal-paws.net",
         },
         {
             image: nycua,
             title: "NYCUA",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            text: "",
             link: "https://nycua.org",
         },
     ];

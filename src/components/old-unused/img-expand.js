@@ -17,7 +17,8 @@ const ImgExpand = () => {
             scale: 0.8,
             duration: 1,
             transformOrigin: "center center",
-            autoAlpha: 0
+            autoAlpha: 0,
+            rotate: -10,
         }).to({}, {
             duration: 1,
             autoAlpha: 1

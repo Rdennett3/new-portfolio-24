@@ -2,25 +2,24 @@ import * as React from "react"
 import "../styles/style.css"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import AboutExtra from "../components/about-extra"
 import AnimatedLines from "../components/intro-text"
 import Intro from "../components/intro"
-import StickyColorScroll from "../components/pinned-list"
 import Logos from "../components/Logos"
-import Work25 from "../components/work-sep-25"
 import HorizontalScroll from "../components/horizontal-work"
+import ContactForm from "../components/ContactForm"
+import WeatherWidget from "../components/WeatherWidget"
+// import ImgExpand from "../components/old-unused/img-expand"
 
 const IndexPage = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      <WeatherWidget />
       <AnimatedLines />
       <Intro />
       <Logos />
       <HorizontalScroll />
-      {/* <Work25 /> */}
-      {/* <AboutExtra /> */}
-      {/* <SlidingText /> */}
+      <ContactForm />
       <Footer />
 
     </>
