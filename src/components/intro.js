@@ -49,12 +49,12 @@ const Intro = () => {
                     I am a Full-stack developer with a passion for the front end and all things design, and E-comm related. Outside of work I enjoy Cooking, Martial Arts, Snowboarding, Hiking, Camping, trying new restaurants, and hanging out with my pets.
                 </p>
             </div>
-            <div className="lower-intro">
+            {/* <div className="lower-intro">
                 <a href="/contact">
                     <h3>Get In Touch</h3>
                     <img src={Arrow} alt="" />
                 </a>
-            </div>
+            </div> */}
         </section>
     );
 };
