@@ -7,6 +7,7 @@ import saltcity from "../images/new-work/saltcity.png"
 import bloomington from "../images/new-work/bloomington.png"
 import personal from "../images/new-work/personal-paws.png"
 import nycua from "../images/new-work/nycua.png"
+import excelsior from "../images/new-work/excelsior.png"
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,33 +44,39 @@ export default function HorizontalScroll() {
 
     const sectionData = [
         {
+            image: excelsior,
+            title: "Excelsior Woods",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            link: "https://excelsiorwood.com",
+        },
+        {
             image: eaglehawk,
             title: "EagleHawk",
-            text: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             link: "https://eaglehawk.io",
         },
         {
             image: saltcity,
             title: "Salt City FCU",
-            text: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             link: "https://saltcityfcu.org",
         },
         {
             image: bloomington,
             title: "Bloomington FD",
-            text: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             link: "https://bloomingtonfiredepartment.com",
         },
         {
             image: personal,
             title: "Personal Paws",
-            text: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             link: "https://personal-paws.net",
         },
         {
             image: nycua,
             title: "NYCUA",
-            text: "",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             link: "https://nycua.org",
         },
     ];

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import Laptop from "../images/laptop-cropped-2.webp"
+import Aruba from "../images/aruba2.png"
 
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -60,21 +61,26 @@ const IntroText = () => {
     }, []);
 
     return (
-
-        <div className="intro-area">
-            <div className="intro-area-wrapper">
-                <div className="intro-area-item">
-                    <h1 className="name" ref={textRef}>
-                        Bob <br /> Dennett
-                    </h1>
-                </div>
-                <div className="intro-area-item">
-                    <div className="intro-area-item-wrapper" id="top-img">
-                        <img src={Laptop} alt="" />
-                    </div>
-                </div>
+        <div className="new-intro-container">
+            <div className="new-intro-wrapper">
+                <h1>Bob Dennett</h1>
+                <img src={Aruba} alt="" />
             </div>
         </div>
+        // <div className="intro-area">
+        //     <div className="intro-area-wrapper">
+        //         <div className="intro-area-item">
+        //             <h1 className="name" ref={textRef}>
+        //                 Bob <br /> Dennett
+        //             </h1>
+        //         </div>
+        //         <div className="intro-area-item">
+        //             <div className="intro-area-item-wrapper" id="top-img">
+        //                 <img src={Laptop} alt="" />
+        //             </div>
+        //         </div>
+        //     </div>
+        // </div>
     );
 };
 
