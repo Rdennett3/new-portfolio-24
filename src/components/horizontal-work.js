@@ -19,26 +19,60 @@ export default function HorizontalScroll() {
         const container = containerRef.current;
         const sections = sectionsRef.current;
 
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        const sectionWidth = isMobile ? window.innerWidth : window.innerWidth * 0.5;
-        const totalScroll = (sections.length - 1) * sectionWidth;
+        gsap.registerPlugin(ScrollTrigger);
 
-        gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
-            ease: "none",
-            scrollTrigger: {
-                trigger: container,
-                start: "top 20%",
-                end: () => "+=" + totalScroll,
-                scrub: true,
-                pin: true,
-                anticipatePin: 1,
-                invalidateOnRefresh: true,
+        ScrollTrigger.matchMedia({
+            // =========================
+            // DESKTOP (horizontal)
+            // =========================
+            "(min-width: 769px)": () => {
+                const totalScroll = (sections.length - 1) * window.innerWidth * 0.5;
+
+                gsap.to(sections, {
+                    xPercent: -100 * (sections.length - 1),
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: container,
+                        start: "top 20%",
+                        end: () => "+=" + totalScroll,
+                        scrub: true,
+                        pin: true,
+                        anticipatePin: 1,
+                        invalidateOnRefresh: true,
+                    },
+                });
+            },
+
+            // =========================
+            // MOBILE (vertical stack)
+            // =========================
+            "(max-width: 768px)": () => {
+                // Set initial positions
+                gsap.set(sections, {
+                    yPercent: 100,
+                    zIndex: (i) => i,
+                });
+
+                gsap.to(sections, {
+                    yPercent: 0,
+                    ease: "none",
+                    stagger: 1,
+                    scrollTrigger: {
+                        trigger: container,
+                        start: "top top",
+                        end: () => "+=" + window.innerHeight * sections.length,
+                        scrub: true,
+                        pin: true,
+                        anticipatePin: 1,
+                        invalidateOnRefresh: true,
+                    },
+                });
             },
         });
 
         return () => ScrollTrigger.getAll().forEach(t => t.kill());
     }, []);
+
 
 
 
