@@ -5,13 +5,13 @@ import Footer from "../components/footer"
 import AnimatedLines from "../components/intro-text"
 import Intro from "../components/intro"
 import Logos from "../components/Logos"
-import HorizontalScroll from "../components/horizontal-work"
+// import HorizontalScroll from "../components/old-unused/horizontal-work"
 import ContactForm from "../components/ContactForm"
 import WeatherWidget from "../components/WeatherWidget"
-// import ImgExpand from "../components/old-unused/img-expand"
-
+import StackedCards from "../components/StackedCards"
 
 const IndexPage = () => {
+
   return (
     <>
       {/* <Header /> */}
@@ -19,7 +19,8 @@ const IndexPage = () => {
       <AnimatedLines />
       <Intro />
       <Logos />
-      <HorizontalScroll />
+      {/* <StackedCards /> */}
+      {/* <HorizontalScroll /> */}
       <ContactForm />
       <Footer />
 

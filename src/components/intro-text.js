@@ -35,7 +35,7 @@ const IntroText = () => {
         const tl = gsap.timeline({ delay: 0.1 });
 
         // Animate lines sliding up
-        tl.from(split.lines, {
+        tl.from(split.words, {
             yPercent: 100,
             ease: "power4.out",
             duration: 1,
@@ -43,16 +43,16 @@ const IntroText = () => {
         });
 
         // Animate characters inside lines with a little stagger
-        tl.from(
-            split.chars,
-            {
-                yPercent: 100,
-                duration: 0.4,
-                stagger: {
-                    each: 0.05,
-                }
-            },
-        );
+        // tl.from(
+        //     split.chars,
+        //     {
+        //         yPercent: 100,
+        //         duration: 0.4,
+        //         stagger: {
+        //             each: 0.05,
+        //         }
+        //     },
+        // );
 
         return () => {
             split.revert(); // Clean up on unmount
@@ -63,7 +63,7 @@ const IntroText = () => {
     return (
         <div className="new-intro-container">
             <div className="new-intro-wrapper">
-                <h1>Bob Dennett</h1>
+                <h1 ref={textRef}>Bob Dennett</h1>
                 <img src={Aruba} alt="" />
             </div>
         </div>
