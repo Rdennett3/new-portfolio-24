@@ -6,7 +6,7 @@ import Salt from "../images/work-logos/saltcity.png";
 import Eaglehawk from "../images/work-logos/eh-logo.webp";
 import Ppaws from "../images/work-logos/ppaws-text-2-trans.png";
 import Nycua from "../images/work-logos/nycua-blue.png";
-import Bloomington from "../images/work-logos/bloomington-logo.png";
+import Bloomington from "../images/work-logos/bloom-trans.png";
 
 const WorkGrid = () => {
     return (
