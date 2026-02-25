@@ -13,14 +13,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
-        name: "Excelsior",
-        image: Excelsior,
-        url: "https://excelsiorwood.com"
-    },
-    {
         name: "Salt City FCU",
         image: Salt,
         url: "https://saltcityfcu.org"
+    },
+    {
+        name: "Excelsior",
+        image: Excelsior,
+        url: "https://excelsiorwood.com"
     },
     {
         name: "Eaglehawk",
@@ -33,15 +33,15 @@ const projects = [
         url: "https://personal-paws.net"
     },
     {
+        name: "Bloomington Fire Dept",
+        image: Bloomington,
+        url: "https://bloomingtonfiredepartment.com/"
+    },
+    {
         name: "NYCUA",
         image: Nycua,
         url: "https://nycua.org"
     },
-    {
-        name: "Bloomington Fire Dept",
-        image: Bloomington,
-        url: "https://bloomingtonfiredepartment.com/"
-    }
 ];
 
 const WorkGrid = () => {
