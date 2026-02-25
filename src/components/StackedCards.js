@@ -103,9 +103,9 @@ export default function StackedCards() {
 
     return (
         <>
-            <div className="work-title">
+            {/* <div className="work-title">
                 <h2>Recent Work</h2>
-            </div>
+            </div> */}
 
             <section ref={containerRef} className="stacked-cards">
                 <div className="stacked-cards__inner">
@@ -119,16 +119,18 @@ export default function StackedCards() {
                                 <img src={card.image} alt={card.title} />
                             </div> */}
                             <div className="stacked-card__content">
-                                <h2>{card.title}</h2>
-                                <p>{card.text}</p>
-                                <a
-                                    href={card.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="stacked-card__button blue-btn"
-                                >
-                                    Visit Site
-                                </a>
+                                <div className="stacked-card-wrapper">
+                                    <h2>{card.title}</h2>
+                                    <p>{card.text}</p>
+                                    <a
+                                        href={card.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="stacked-card__button blue-btn"
+                                    >
+                                        Visit Site
+                                    </a>
+                                </div>
                             </div>
                         </article>
                     ))}

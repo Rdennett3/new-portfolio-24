@@ -5,22 +5,19 @@ import Footer from "../components/footer"
 import AnimatedLines from "../components/intro-text"
 import Intro from "../components/intro"
 import Logos from "../components/Logos"
-// import HorizontalScroll from "../components/old-unused/horizontal-work"
 import ContactForm from "../components/ContactForm"
 import WeatherWidget from "../components/WeatherWidget"
-import StackedCards from "../components/StackedCards"
+import WorkGrid from "../components/work-grid"
 
 const IndexPage = () => {
 
   return (
     <>
-      {/* <Header /> */}
       <WeatherWidget />
       <AnimatedLines />
       <Intro />
       <Logos />
-      {/* <StackedCards /> */}
-      {/* <HorizontalScroll /> */}
+      <WorkGrid />
       <ContactForm />
       <Footer />
 
