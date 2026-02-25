@@ -549,7 +549,7 @@ span {
     height: auto;
     padding: 10px 0;
     margin-bottom: 20px;
-    border: 1px solid var(--dark);
+    border: 3px solid var(--dark);
     color: var(--dark);
     font-family: 'roboto', sans-serif;
     padding: 20px 0 20px 20px;
@@ -583,7 +583,7 @@ span {
 
 .formButton {
     padding: 20px 10%;
-    border: 1px solid var(--dark);
+    border: 3px solid var(--dark);
     background: transparent;
     cursor: pointer;
     color: var(--dark);
@@ -1667,6 +1667,18 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    /* background: var(--lime); */
+    padding: 2.5% 0;
+    /* border-radius: 40px; */
+}
+
+.work-outer-26 h2 {
+    font-size: 10vw;
+    color: var(--dark);
+    font-weight: 800;
+    align-self: flex-start;
+    margin-left: 5%;
 }
 
 .work-wrapper-26 {
@@ -1691,6 +1703,8 @@ span {
     flex-direction: column;
     gap: 1em;
     padding: 1em 0;
+    background: var(--main-bg);
+    /* box-shadow: 5px 5px 0 var(--dark); */
 }
 
 .work-item-26 img {
