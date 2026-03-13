@@ -57,7 +57,8 @@ const WorkGrid = () => {
                 stagger: 0.2,
                 scrollTrigger: {
                     trigger: sectionRef.current,
-                    start: "top 80%",
+                    start: "top 40%",
+                    markers: true,
                 }
             });
         }, sectionRef);

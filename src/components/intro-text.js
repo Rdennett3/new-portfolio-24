@@ -1,9 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-import Laptop from "../images/laptop-cropped-2.webp"
-import Aruba from "../images/aruba2.png"
+import Laptop from "../images/laptop-cropped-2.webp";
+import Aruba from "../images/aruba2.png";
 
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrambleTextPlugin);
@@ -12,16 +12,14 @@ const IntroText = () => {
 
     const textRef = useRef(null);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!textRef.current) return;
 
-        // Split into lines, words, and characters
         const split = new SplitText(textRef.current, {
             type: "lines,words,chars",
             linesClass: "split-line"
         });
 
-        // Make sure each line has its own container for masking (like a curtain reveal)
         split.lines.forEach((line) => {
             const wrapper = document.createElement("div");
             wrapper.style.overflow = "hidden";
@@ -31,10 +29,8 @@ const IntroText = () => {
             wrapper.appendChild(line);
         });
 
-        // Timeline to sequence line + char animations
-        const tl = gsap.timeline({ delay: 0.1 });
+        const tl = gsap.timeline({ delay: 1 });
 
-        // Animate lines sliding up
         tl.from(split.words, {
             yPercent: 100,
             ease: "power4.out",
@@ -42,20 +38,8 @@ const IntroText = () => {
             stagger: 0.2
         });
 
-        // Animate characters inside lines with a little stagger
-        // tl.from(
-        //     split.chars,
-        //     {
-        //         yPercent: 100,
-        //         duration: 0.4,
-        //         stagger: {
-        //             each: 0.05,
-        //         }
-        //     },
-        // );
-
         return () => {
-            split.revert(); // Clean up on unmount
+            split.revert();
             tl.kill();
         };
     }, []);
